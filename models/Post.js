@@ -31,6 +31,12 @@ const postSchema = new mongoose.Schema(
       type: Boolean,
       default: true,
     },
+    requiredSkills: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "Skill",
+      },
+    ],
   },
   {
     toJSON: { virtuals: true },

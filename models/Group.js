@@ -5,7 +5,6 @@ const groupSchema = new mongoose.Schema({
     {
       type: mongoose.Types.ObjectId,
       ref: "User",
-      required: [true, "Feedback must target a user"],
     },
   ],
 });
