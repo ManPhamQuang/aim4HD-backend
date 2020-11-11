@@ -1,0 +1,14 @@
+[
+  {
+    "_id": "5c8a1d5b0190b214360dc057",
+    "name": "Long Vu",
+    "email": "longvu@rmit.edu.vn",
+    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    "studentNumberCard": "S1122333",
+    "avatar": "default.jpg",
+    "school": "SCD",
+    "major": ["IT"],
+    "numberOfRecommended": 10,
+    "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa185", "5c8a1f292f8fb814b56fa186"]
+  }
+]
