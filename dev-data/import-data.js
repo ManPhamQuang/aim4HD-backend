@@ -4,6 +4,9 @@ dotenv.config({ path: `${__dirname}/../config.env` });
 const mongoose = require("mongoose");
 const User = require("../models/User");
 const Skill = require("../models/Skill");
+const Post = require("../models/Post");
+const Course = require("../models/Course");
+const School = require("../models/School");
 
 mongoose
   .connect(
@@ -20,6 +23,13 @@ mongoose
 
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, "utf8"));
 const skills = JSON.parse(fs.readFileSync(`${__dirname}/skills.json`, "utf8"));
+const courses = JSON.parse(
+  fs.readFileSync(`${__dirname}/courses.json`, "utf8")
+);
+const schools = JSON.parse(
+  fs.readFileSync(`${__dirname}/schools.json`, "utf8")
+);
+const posts = JSON.parse(fs.readFileSync(`${__dirname}/posts.json`, "utf8"));
 
 const importData = async () => {
   try {
@@ -27,6 +37,15 @@ const importData = async () => {
       validateBeforeSave: false,
     });
     await Skill.create(skills, {
+      validateBeforeSave: false,
+    });
+    await Course.create(courses, {
+      validateBeforeSave: false,
+    });
+    await School.create(schools, {
+      validateBeforeSave: false,
+    });
+    await Post.create(posts, {
       validateBeforeSave: false,
     });
     console.log("DATA SUCCESSFULLY INSERTED");
@@ -40,6 +59,9 @@ const deleteData = async () => {
   try {
     await User.deleteMany();
     await Skill.deleteMany();
+    await School.deleteMany();
+    await Course.deleteMany();
+    await Post.deleteMany();
     console.log("DATA SUCCESSFULLY DELETED");
     process.exit();
   } catch (error) {

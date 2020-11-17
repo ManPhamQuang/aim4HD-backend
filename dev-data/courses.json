@@ -1,5 +1,12 @@
 [
   {
-    
+    "_id": "5c8a1f292f8fb814b56fa174",
+    "name": "Introduction to IT",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa175",
+    "name": "Introduction to computer system",
+    "school": "5c8a1f292f8fb814b56fa166"
   }
 ]

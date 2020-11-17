@@ -6,9 +6,33 @@
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
     "studentNumberCard": "s1122334",
     "avatar": "default.jpg",
-    "school": "SCD",
+    "school": "SST",
     "major": ["IT"],
     "numberOfRecommended": 0,
     "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa185", "5c8a1f292f8fb814b56fa186"]
+  },
+  {
+    "_id": "5fab4912ffd1131f3cace692",
+    "name": "Hong Minh",
+    "email": "s2233445@rmit.edu.vn",
+    "description": "I am Minh, and i love coding. Looking forward to working with you guys",
+    "studentNumberCard": "s2233445",
+    "avatar": "default.jpg",
+    "school": "SST",
+    "major": ["IT"],
+    "numberOfRecommended": 0,
+    "skills": ["5c8a1f292f8fb814b56fa187", "5c8a1f292f8fb814b56fa188", "5c8a1f292f8fb814b56fa189"]
+  },
+  {
+    "_id": "5fab4912ffd1131f3cace693",
+    "name": "The Son",
+    "email": "s3344667@rmit.edu.vn",
+    "description": "I am Son, and i enjoy coding. Hope we will get along",
+    "studentNumberCard": "s3344667",
+    "avatar": "default.jpg",
+    "school": "SST",
+    "major": ["IT"],
+    "numberOfRecommended": 0,
+    "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa188", "5c8a1f292f8fb814b56fa186"]
   }
 ]
