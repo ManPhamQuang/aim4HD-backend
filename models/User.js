@@ -33,12 +33,10 @@ const userSchema = new mongoose.Schema(
         message: "School must be SCD, SBM, or SST",
       },
     },
-    major: [
-      {
-        type: String,
-        required: [true, "Major is required"],
-      },
-    ],
+    major: {
+      type: String,
+      required: [true, "Major is required"],
+    },
     numberOfRecommended: {
       type: Number,
       default: 0,
