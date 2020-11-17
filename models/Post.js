@@ -23,10 +23,6 @@ const postSchema = new mongoose.Schema(
     },
     currentMember: Number,
     maximumMember: Number,
-    course: {
-      type: String,
-      required: [true, "A course is required"],
-    },
     isOpen: {
       type: Boolean,
       default: true,
@@ -37,6 +33,14 @@ const postSchema = new mongoose.Schema(
         ref: "Skill",
       },
     ],
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+    },
+    course: {
+      type: mongoose.Types.ObjectId,
+      ref: "Course",
+    },
   },
   {
     toJSON: { virtuals: true },

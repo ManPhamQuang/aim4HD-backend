@@ -49,6 +49,12 @@ const userSchema = new mongoose.Schema(
         ref: "Skill",
       },
     ],
+    currentCourse: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "Course",
+      },
+    ],
   },
   {
     toJSON: { virtuals: true },
