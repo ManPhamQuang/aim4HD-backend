@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "start server.js",
+    "start": "node server.js",
     "debug": "ndb server.js"
   },
   "keywords": [],
