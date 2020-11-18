@@ -34,5 +34,41 @@
     "major": ["IT"],
     "numberOfRecommended": 0,
     "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa188", "5c8a1f292f8fb814b56fa186"]
+  },
+  {
+    "_id": "5fab4912ffd1131f3cace694",
+    "name": "Bao Ngoc",
+    "email": "s3825456@rmit.edu.vn",
+    "description": "Hello everyone, my name is Bao Ngoc, I am interested in Information Technology. Contact me if you need help.",
+    "studentNumberCard": "s3825456",
+    "avatar": "default.jpg",
+    "school": "SST",
+    "major": ["IT"],
+    "numberOfRecommended": 0,
+    "skills": ["5c8a1f292f8fb814b56fa196", "5c8a1f292f8fb814b56fa198", "5c8a1f292f8fb814b56fa199"]
+  },
+  {
+    "_id": "5fab4912ffd1131f3cace695",
+    "name": "Gia Bao",
+    "email": "s3344668@rmit.edu.vn",
+    "description": "Hi, my name is Bao, I am an expertise in Java and C++.Nice to meet you!",
+    "studentNumberCard": "s3344668",
+    "avatar": "default.jpg",
+    "school": "SST",
+    "major": ["IT"],
+    "numberOfRecommended": 0,
+    "skills": ["5c8a1f292f8fb814b56fa192", "5c8a1f292f8fb814b56fa190", "5c8a1f292f8fb814b56fa187"]
+  },
+  {
+    "_id": "5fab4912ffd1131f3cace696",
+    "name": "Lam Phuong",
+    "email": "s3825432@rmit.edu.vn",
+    "description": "I am Phuong, I am pretty good at coding and writing report.",
+    "studentNumberCard": "s3825432",
+    "avatar": "default.jpg",
+    "school": "SST",
+    "major": ["IT"],
+    "numberOfRecommended": 0,
+    "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa199", "5c8a1f292f8fb814b56fa191"]
   }
 ]
