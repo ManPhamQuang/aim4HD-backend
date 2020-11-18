@@ -1,34 +1,50 @@
 [
-  {
-    "author": "5fab4912ffd1131f3cace691",
-    "title": "Looking for teammates",
-    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-    "aiming": "HD",
-    "currentMember": 1,
-    "maximumMember": 4,
-    "isOpen": true,
-    "requiredSkills": [
-      "5c8a1f292f8fb814b56fa184",
-      "5c8a1f292f8fb814b56fa185",
-      "5c8a1f292f8fb814b56fa186"
-    ],
-    "createdAt": "1605515544427",
-    "course": "5c8a1f292f8fb814b56fa175"
-  },
-  {
-    "author": "5fab4912ffd1131f3cace691",
-    "title": "We are recruiting teammates for building an ReactJS app",
-    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-    "aiming": "HD",
-    "currentMember": 1,
-    "maximumMember": 4,
-    "isOpen": true,
-    "requiredSkills": [
-      "5c8a1f292f8fb814b56fa184",
-      "5c8a1f292f8fb814b56fa185",
-      "5c8a1f292f8fb814b56fa186"
-    ],
-    "createdAt": "1605515544427",
-    "course": "5c8a1f292f8fb814b56fa175"
-  }
+	{
+		"author": "5fab4912ffd1131f3cace691",
+		"title": "Looking for teammates",
+		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+		"aiming": "HD",
+		"currentMember": 1,
+		"maximumMember": 4,
+		"isOpen": true,
+		"requiredSkills": [
+			"5c8a1f292f8fb814b56fa184",
+			"5c8a1f292f8fb814b56fa185",
+			"5c8a1f292f8fb814b56fa186"
+		],
+		"createdAt": "1605515544427",
+		"course": "5c8a1f292f8fb814b56fa175"
+	},
+	{
+		"author": "5fab4912ffd1131f3cace691",
+		"title": "We are recruiting teammates for building an ReactJS app",
+		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+		"aiming": "HD",
+		"currentMember": 1,
+		"maximumMember": 4,
+		"isOpen": true,
+		"requiredSkills": [
+			"5c8a1f292f8fb814b56fa184",
+			"5c8a1f292f8fb814b56fa185",
+			"5c8a1f292f8fb814b56fa186"
+		],
+		"createdAt": "1605515544427",
+		"course": "5c8a1f292f8fb814b56fa175"
+	},
+	{
+		"author": "5fab4912ffd1131f3cace700",
+		"title": "Looking for 2 teammates",
+		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+		"aiming": "PA",
+		"currentMember": 2,
+		"maximumMember": 2,
+		"isOpen": true,
+		"requiredSkills": [
+			"5c8a1f292f8fb814b56fa200",
+			"5c8a1f292f8fb814b56fa201",
+			"5c8a1f292f8fb814b56fa220"
+		],
+		"createdAt": "1605707422979",
+		"course": "5c8a1f292f8fb814b56fa175"
+	}
 ]

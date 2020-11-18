@@ -126,5 +126,33 @@
   {
     "_id": "5c8a1f292f8fb814b56fa215",
     "name": "Visual Basic"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa216",
+    "name": "Pascal"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa217",
+    "name": "Perl"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa218",
+    "name": "Scala"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa219",
+    "name": "Flutter"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa220",
+    "name": "Haskell"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa221",
+    "name": "Assembly"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa222",
+    "name": "Delphi"
   }
 ]

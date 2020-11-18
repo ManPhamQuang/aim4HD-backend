@@ -1,74 +1,162 @@
 [
-  {
-    "_id": "5fab4912ffd1131f3cace691",
-    "name": "Long Vu",
-    "email": "s1122334@rmit.edu.vn",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    "studentNumberCard": "s1122334",
-    "avatar": "default.jpg",
-    "school": "SST",
-    "major": ["IT"],
-    "numberOfRecommended": 0,
-    "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa185", "5c8a1f292f8fb814b56fa186"]
-  },
-  {
-    "_id": "5fab4912ffd1131f3cace692",
-    "name": "Hong Minh",
-    "email": "s2233445@rmit.edu.vn",
-    "description": "I am Minh, and i love coding. Looking forward to working with you guys",
-    "studentNumberCard": "s2233445",
-    "avatar": "default.jpg",
-    "school": "SST",
-    "major": ["IT"],
-    "numberOfRecommended": 0,
-    "skills": ["5c8a1f292f8fb814b56fa187", "5c8a1f292f8fb814b56fa188", "5c8a1f292f8fb814b56fa189"]
-  },
-  {
-    "_id": "5fab4912ffd1131f3cace693",
-    "name": "The Son",
-    "email": "s3344667@rmit.edu.vn",
-    "description": "I am Son, and i enjoy coding. Hope we will get along",
-    "studentNumberCard": "s3344667",
-    "avatar": "default.jpg",
-    "school": "SST",
-    "major": ["IT"],
-    "numberOfRecommended": 0,
-    "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa188", "5c8a1f292f8fb814b56fa186"]
-  },
-  {
-    "_id": "5fab4912ffd1131f3cace694",
-    "name": "Bao Ngoc",
-    "email": "s3825456@rmit.edu.vn",
-    "description": "Hello everyone, my name is Bao Ngoc, I am interested in Information Technology. Contact me if you need help.",
-    "studentNumberCard": "s3825456",
-    "avatar": "default.jpg",
-    "school": "SST",
-    "major": ["IT"],
-    "numberOfRecommended": 0,
-    "skills": ["5c8a1f292f8fb814b56fa196", "5c8a1f292f8fb814b56fa198", "5c8a1f292f8fb814b56fa199"]
-  },
-  {
-    "_id": "5fab4912ffd1131f3cace695",
-    "name": "Gia Bao",
-    "email": "s3344668@rmit.edu.vn",
-    "description": "Hi, my name is Bao, I am an expertise in Java and C++.Nice to meet you!",
-    "studentNumberCard": "s3344668",
-    "avatar": "default.jpg",
-    "school": "SST",
-    "major": ["IT"],
-    "numberOfRecommended": 0,
-    "skills": ["5c8a1f292f8fb814b56fa192", "5c8a1f292f8fb814b56fa190", "5c8a1f292f8fb814b56fa187"]
-  },
-  {
-    "_id": "5fab4912ffd1131f3cace696",
-    "name": "Lam Phuong",
-    "email": "s3825432@rmit.edu.vn",
-    "description": "I am Phuong, I am pretty good at coding and writing report.",
-    "studentNumberCard": "s3825432",
-    "avatar": "default.jpg",
-    "school": "SST",
-    "major": ["IT"],
-    "numberOfRecommended": 0,
-    "skills": ["5c8a1f292f8fb814b56fa184", "5c8a1f292f8fb814b56fa199", "5c8a1f292f8fb814b56fa191"]
-  }
+	{
+		"_id": "5fab4912ffd1131f3cace691",
+		"name": "Long Vu",
+		"email": "s1122334@rmit.edu.vn",
+		"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+		"studentNumberCard": "s1122334",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa184",
+			"5c8a1f292f8fb814b56fa185",
+			"5c8a1f292f8fb814b56fa186"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace692",
+		"name": "Hong Minh",
+		"email": "s2233445@rmit.edu.vn",
+		"description": "I am Minh, and i love coding. Looking forward to working with you guys",
+		"studentNumberCard": "s2233445",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa187",
+			"5c8a1f292f8fb814b56fa188",
+			"5c8a1f292f8fb814b56fa189"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace693",
+		"name": "The Son",
+		"email": "s3344667@rmit.edu.vn",
+		"description": "I am Son, and i enjoy coding. Hope we will get along",
+		"studentNumberCard": "s3344667",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa184",
+			"5c8a1f292f8fb814b56fa188",
+			"5c8a1f292f8fb814b56fa186"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace694",
+		"name": "Bao Ngoc",
+		"email": "s3825456@rmit.edu.vn",
+		"description": "Hello everyone, my name is Bao Ngoc, I am interested in Information Technology. Contact me if you need help.",
+		"studentNumberCard": "s3825456",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa196",
+			"5c8a1f292f8fb814b56fa198",
+			"5c8a1f292f8fb814b56fa199"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace695",
+		"name": "Gia Bao",
+		"email": "s3344668@rmit.edu.vn",
+		"description": "Hi, my name is Bao, I am an expertise in Java and C++.Nice to meet you!",
+		"studentNumberCard": "s3344668",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa192",
+			"5c8a1f292f8fb814b56fa190",
+			"5c8a1f292f8fb814b56fa187"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace696",
+		"name": "Lam Phuong",
+		"email": "s3825432@rmit.edu.vn",
+		"description": "I am Phuong, I am pretty good at coding and writing report.",
+		"studentNumberCard": "s3825432",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa184",
+			"5c8a1f292f8fb814b56fa199",
+			"5c8a1f292f8fb814b56fa191"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace697",
+		"name": "Pham Quang Man",
+		"email": "s3825444@rmit.edu.vn",
+		"description": "My name is Man, I am very confident at my programming skills.",
+		"studentNumberCard": "s3825444",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa186",
+			"5c8a1f292f8fb814b56fa200",
+			"5c8a1f292f8fb814b56fa214"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace698",
+		"name": "Nguyen Minh Anh",
+		"email": "s3825466@rmit.edu.vn",
+		"description": "Hello, I am Minh Anh and I am currently an IT student.",
+		"studentNumberCard": "s3825466",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa198",
+			"5c8a1f292f8fb814b56fa205",
+			"5c8a1f292f8fb814b56fa210"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace699",
+		"name": "Phuong Thao",
+		"email": "s3825498@rmit.edu.vn",
+		"description": "Hi everyone, my name is Phuong Thao and I am studying IT.",
+		"studentNumberCard": "s3825498",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa197",
+			"5c8a1f292f8fb814b56fa218",
+			"5c8a1f292f8fb814b56fa216"
+		]
+	},
+	{
+		"_id": "5fab4912ffd1131f3cace700",
+		"name": " Nguyen Huu Luan",
+		"email": "s3825411@rmit.edu.vn",
+		"description": "Hi, my name is Huu Luan and I am an IT student. Nice to meet you!",
+		"studentNumberCard": "s3825411",
+		"avatar": "default.jpg",
+		"school": "SST",
+		"major": ["IT"],
+		"numberOfRecommended": 0,
+		"skills": [
+			"5c8a1f292f8fb814b56fa195",
+			"5c8a1f292f8fb814b56fa192",
+			"5c8a1f292f8fb814b56fa213"
+		]
+	}
 ]
