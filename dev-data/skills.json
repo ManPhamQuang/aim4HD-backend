@@ -22,5 +22,46 @@
   {
     "_id": "5c8a1f292f8fb814b56fa189",
     "name": "ExpressJS"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa190",
+    "name": "Java"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa191",
+    "name": "C language"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa192",
+    "name": "C++"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa193",
+    "name": "C#"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa194",
+    "name": "Python"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa195",
+    "name": "React Native"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa196",
+    "name": "Swift"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa197",
+    "name": "Ruby"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa198",
+    "name": "C++"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa192",
+    "name": "PHP"
   }
+
 ]
