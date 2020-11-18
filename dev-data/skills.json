@@ -62,6 +62,31 @@
   {
     "_id": "5c8a1f292f8fb814b56fa199",
     "name": "PHP"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa200",
+    "name": ".Net"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa201",
+    "name": "mySQL"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa202",
+    "name": "MariaDB"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa203",
+    "name": "Unity"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa204",
+    "name": "Machine learning"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa205",
+    "name": "VueJS"
   }
+
 
 ]
