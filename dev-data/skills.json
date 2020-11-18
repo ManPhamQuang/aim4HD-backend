@@ -86,7 +86,45 @@
   {
     "_id": "5c8a1f292f8fb814b56fa205",
     "name": "VueJS"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa206",
+    "name": "Angular"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa207",
+    "name": "Objective-C"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa208",
+    "name": "TypeScript"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa209",
+    "name": "Kotlin"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa210",
+    "name": "Matlab"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa211",
+    "name": "R language"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa212",
+    "name": "Go"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa213",
+    "name": "Groovy"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa214",
+    "name": "Lua"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa215",
+    "name": "Visual Basic"
   }
-
-
 ]
