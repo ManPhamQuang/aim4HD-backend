@@ -9,8 +9,8 @@ const courseSchema = new mongoose.Schema(
     },
   },
   {
-    toJSON: true,
-    toObject: true,
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
   }
 );
 
