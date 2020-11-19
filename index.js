@@ -1,10 +1,13 @@
 const express = require("express");
+const cors = require("cors");
 const userRouter = require("./route/userRoute");
 const skillRouter = require("./route/skillRoute");
 const postRouter = require("./route/postRoute");
 const globalErrorAppHandler = require("./controller/errorController");
 const AppError = require("./utils/appError");
 const app = express();
+
+app.use(cors());
 
 app.use(express.json());
 
