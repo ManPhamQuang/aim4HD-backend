@@ -18,7 +18,12 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/skills", skillRouter);
 
 app.all("*", (req, res, next) => {
-  return next(new AppError(`Given url ${req.originalUrl} does not exist`, 404));
+  return next(
+    new AppError(
+      `Given url ${req.method} ${req.originalUrl} does not exist`,
+      404
+    )
+  );
 });
 
 app.use(globalErrorAppHandler);

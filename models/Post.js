@@ -19,6 +19,7 @@ const postSchema = new mongoose.Schema(
       type: String,
       enum: {
         values: ["HD", "DI", "PA", "CR"],
+        message: "Aiming must be HD, DI, PA, or CR",
       },
     },
     currentMember: Number,
