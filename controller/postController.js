@@ -5,7 +5,10 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
-  const query = Post.find().populate("author");
+  const query = Post.find().populate({
+    path: "author",
+    populate: { path: "skills" },
+  });
 
   // Filter
   const queryObj = { ...req.query };
@@ -49,7 +52,10 @@ exports.getAllPosts = catchAsync(async (req, res, next) => {
 
 exports.getPost = catchAsync(async (req, res, next) => {
   const post = await Post.findById(req.params.id)
-    .populate("author")
+    .populate({
+      path: "author",
+      populate: { path: "skills" },
+    })
     .populate("requiredSkills");
   if (!post) return next(new AppError("No Post found with a given ID", 404));
   res.status(200).json({
