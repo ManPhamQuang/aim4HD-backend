@@ -10,5 +10,53 @@
     "name": "Introduction to computer system",
     "code": "COSC2500",
     "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa176",
+    "name": "Engineering Mathematics ",
+    "code": "MATH2394",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa177",
+    "name": "Engineering Computing 1",
+    "code": "EEET2601 ",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa178",
+    "name": "Introduction to Electrical and Electronic Engineering",
+    "code": "EEET2603",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa179",
+    "name": "Engineering Science",
+    "code": "OENG120",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa180",
+    "name": "Digital Fundamentals",
+    "code": "OENG1207",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa181",
+    "name": "Introduction to Professional Engineering Practice",
+    "code": "OENG1181",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa182",
+    "name": "Creative Engineering CAD",
+    "code": "OENG1205",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa183",
+    "name": "Advanced Manufacturing and Mechatronics: What We Make and How We Make It",
+    "code": "MANU2518",
+    "school": "5c8a1f292f8fb814b56fa166"
   }
 ]
