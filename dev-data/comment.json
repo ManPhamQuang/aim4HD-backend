@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "5bbb674b0e67ce33c0648c01",
+    "post": "5fbb674b0e67ce33c0539f01",
+    "user": "5fab4912ffd1131f3cace700",
+    "content": "Can i join your team?",
+    "date": "1606131290523"
+  },
+  {
+    "_id": "5bbb674b0e67ce33c0648c02",
+    "post": "5fbb674b0e67ce33c0539f01",
+    "user": "5fab4912ffd1131f3cace699",
+    "content": "I love your idea. Can i join?",
+    "date": "1606131290123"
+  }
+]
