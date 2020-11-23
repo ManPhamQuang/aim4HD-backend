@@ -2,11 +2,13 @@
   {
     "_id": "5c8a1f292f8fb814b56fa174",
     "name": "Introduction to IT",
+    "code": "COSC2083",
     "school": "5c8a1f292f8fb814b56fa166"
   },
   {
     "_id": "5c8a1f292f8fb814b56fa175",
     "name": "Introduction to computer system",
+    "code": "COSC2500",
     "school": "5c8a1f292f8fb814b56fa166"
   }
 ]

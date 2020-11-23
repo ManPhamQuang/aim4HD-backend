@@ -15,14 +15,29 @@ module.exports = (error, req, res, next) => {
     errorMsgObj = new AppError(message, 404);
   }
 
+  if (error.name === "MongoError" && error.code === 11000) {
+    console.log(error);
+    errorMsgObj = new AppError(
+      `Duplicate value (${Object.keys(error.keyPattern)[0]}: ${
+        error.keyValue[Object.keys(error.keyPattern)[0]]
+      }). Please use another value`,
+      404
+    );
+  }
+
   if (errorMsgObj)
     res.status(errorMsgObj.statusCode).json({
       status: errorMsgObj.status,
       message: errorMsgObj.message,
     });
-  else
+  else {
+    console.log(error);
     res.status(500).json({
       status: "error",
       message: "Something went wrong with a server. Please try again later",
+      error,
+      stack: error.stack,
+      name: error.name,
     });
+  }
 };
