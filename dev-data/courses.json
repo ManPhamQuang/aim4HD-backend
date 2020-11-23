@@ -221,5 +221,59 @@
     "name": "Engineering Mechanics",
     "code": "MIET2500",
     "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa211",
+    "name": "Stress Analysis",
+    "code": "MIET2499",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa212",
+    "name": "Mechanical Design",
+    "code": "MIET2510",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa213",
+    "name": "Design for Assembly and Automation",
+    "code": "MANU2484",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa214",
+    "name": "Materials Engineering",
+    "code": "MANU2482",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa215",
+    "name": "Autonomous Systems",
+    "code": "MANU2480",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa216",
+    "name": "Technology Leadership",
+    "code": "OENG1130",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa217",
+    "name": "Advanced Robotics",
+    "code": "MANU2478",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa218",
+    "name": "Automated System Design",
+    "code": "MANU2476",
+    "school": "5c8a1f292f8fb814b56fa166"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa219",
+    "name": "Computer Integrated Manufacturing",
+    "code": "MANU2474",
+    "school": "5c8a1f292f8fb814b56fa166"
   }
 ]
