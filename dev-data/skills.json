@@ -162,6 +162,150 @@
   {
     "_id": "5c8a1f292f8fb814b56fa224",
     "name": "GitHub and Repository management "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa225",
+    "name": "Mongo DB "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa226",
+    "name": "PostgreSQL "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa227",
+    "name": "Artificial Intelligence "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa228",
+    "name": "Cloud Computing "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa229",
+    "name": "UX Design "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa230",
+    "name": "IP Setup "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa231",
+    "name": "Wireless Modems/Routers "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa232",
+    "name": "Cloud Services "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa233",
+    "name": "Cyber Security"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa234",
+    "name": "Cloud Systems Administration"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa235",
+    "name": "Information Management"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa236",
+    "name": "User-Centered Design"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa237",
+    "name": "Web Development"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa238",
+    "name": "Web Design"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa239",
+    "name": "Network Security"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa240",
+    "name": "Algorithms"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa241",
+    "name": "Database Design"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa242",
+    "name": "Database Management"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa243",
+    "name": "Go"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa244",
+    "name": "Mobile Development"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa245",
+    "name": "Google Cloud Functions"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa246",
+    "name": "Firebase"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa247",
+    "name": "Repository management"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa248",
+    "name": "Logical Thinking"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa249",
+    "name": "Writing technical report"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa250",
+    "name": "Data Structure "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa251",
+    "name": "Project Management"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa252",
+    "name": "Electrical Analysis"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa253",
+    "name": "Math"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa254",
+    "name": "Presentation"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa255",
+    "name": "Study plan "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa256",
+    "name": "Time management"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa257",
+    "name": "Problem solving/analyzing skills "
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa258",
+    "name": "Researching"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa259",
+    "name": "Troubleshooting skills"
+  },
+  {
+    "_id": "5c8a1f292f8fb814b56fa260",
+    "name": "Communication"
   }
 
 ]
