@@ -7,6 +7,7 @@ const Skill = require("../models/Skill");
 const Post = require("../models/Post");
 const Course = require("../models/Course");
 const School = require("../models/School");
+const Comment = require("../models/Comment");
 
 mongoose
   .connect(
@@ -30,6 +31,9 @@ const schools = JSON.parse(
   fs.readFileSync(`${__dirname}/schools.json`, "utf8")
 );
 const posts = JSON.parse(fs.readFileSync(`${__dirname}/posts.json`, "utf8"));
+const comments = JSON.parse(
+  fs.readFileSync(`${__dirname}/comments.json`, "utf8")
+);
 
 const importData = async () => {
   try {
@@ -48,6 +52,9 @@ const importData = async () => {
     await Post.create(posts, {
       validateBeforeSave: false,
     });
+    await Comment.create(comments, {
+      validateBeforeSave: false,
+    });
     console.log("DATA SUCCESSFULLY INSERTED");
     process.exit();
   } catch (error) {
@@ -62,6 +69,7 @@ const deleteData = async () => {
     await School.deleteMany();
     await Course.deleteMany();
     await Post.deleteMany();
+    await Comment.deleteMany();
     console.log("DATA SUCCESSFULLY DELETED");
     process.exit();
   } catch (error) {

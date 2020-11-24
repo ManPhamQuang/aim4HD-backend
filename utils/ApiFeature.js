@@ -10,7 +10,6 @@ class ApiFeature {
     const queryObjForFilter = { ...this.queryObj };
     const excludeFields = ["sort", "page", "limit", "fields"];
     excludeFields.forEach(field => delete queryObjForFilter[field]);
-    console.log(queryObjForFilter);
     this.query.find(queryObjForFilter);
     return this;
   }
@@ -39,7 +38,6 @@ class ApiFeature {
     const currentPage = parseInt(this.queryObj.page) || 1;
     const pageSize = parseInt(this.queryObj.limit) || 3;
     const skip = (currentPage - 1) * pageSize;
-    console.log({ currentPage, pageSize });
     this.query.skip(skip).limit(pageSize);
     return this;
   }
