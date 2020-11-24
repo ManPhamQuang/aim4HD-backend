@@ -42,6 +42,13 @@ const postSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "Course",
     },
+    appliedStudents: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "User",
+      },
+    ],
+    numberOfComments: { type: Number, default: 0 },
   },
   {
     toJSON: { virtuals: true },
