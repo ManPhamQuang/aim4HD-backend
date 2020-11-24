@@ -7,7 +7,7 @@
 		"studentNumberCard": "s1122334",
 		"avatar": "https://www.rd.com/wp-content/uploads/2018/07/james-corden-attends-the-world-premiere-of-ocean-s-8-at-alice-tully-hall-in-new-york.jpg",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa184",
@@ -23,7 +23,7 @@
 		"studentNumberCard": "s2233445",
 		"avatar": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dwayne-johnson-attends-the-premiere-of-universal-pictures-news-photo-1161880409-1566504158.jpg?crop=0.762xw:0.654xh;0.0698xw,0.0141xh&resize=480:*",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa187",
@@ -39,7 +39,7 @@
 		"studentNumberCard": "s3344667",
 		"avatar": "https://thelogicalindian.com/h-upload/2020/01/27/149183-bill-gates.jpg",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa184",
@@ -55,7 +55,7 @@
 		"studentNumberCard": "s3825456",
 		"avatar": "https://scontent-xsp1-1.xx.fbcdn.net/v/t1.0-9/92954613_2472736239723249_2665763270073253888_o.jpg?_nc_cat=105&ccb=2&_nc_sid=174925&_nc_ohc=O-D4jqUfbQQAX88MoT5&_nc_ht=scontent-xsp1-1.xx&oh=3b79fb55f2e9d1a59b2ca89e8c010415&oe=5FE45B22",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa196",
@@ -71,7 +71,7 @@
 		"studentNumberCard": "s3344668",
 		"avatar": "https://images.indianexpress.com/2020/07/jeff-bezos-amazon-inc-bloomberg-1200.jpg",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa192",
@@ -87,7 +87,7 @@
 		"studentNumberCard": "s3825432",
 		"avatar": "https://scontent-xsp1-2.xx.fbcdn.net/v/t1.0-9/116707843_2661908164022208_484094272993460414_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_ohc=RxoczkDDOQYAX8ptfIr&_nc_ht=scontent-xsp1-2.xx&oh=a8eba8f6422c4c6cc655bb91c85bff9b&oe=5FE371EE",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa184",
@@ -103,7 +103,7 @@
 		"studentNumberCard": "s3825444",
 		"avatar": "https://scontent-xsp1-2.xx.fbcdn.net/v/t1.0-9/87767086_2726748590743141_5800805589009301504_o.jpg?_nc_cat=101&ccb=2&_nc_sid=730e14&_nc_ohc=EPkd0Ans-b8AX-Jn05i&_nc_ht=scontent-xsp1-2.xx&oh=3af766682e60187a138e2406b350be98&oe=5FE0F997",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa186",
@@ -119,7 +119,7 @@
 		"studentNumberCard": "s3825466",
 		"avatar": "https://scontent-xsp1-2.xx.fbcdn.net/v/t1.0-9/69399215_2462381474005230_2589666452566966272_o.jpg?_nc_cat=107&ccb=2&_nc_sid=8bfeb9&_nc_ohc=BlWmqC-TJBkAX9osySU&_nc_ht=scontent-xsp1-2.xx&oh=986c39f9b645f214ebd67644415c0fda&oe=5FE1B169",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa198",
@@ -135,7 +135,7 @@
 		"studentNumberCard": "s3825498",
 		"avatar": "https://static.billboard.com/files/2020/10/Nicki-Minaj-2017-billboard-1548-1603300352-compressed.jpg",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa197",
@@ -151,7 +151,7 @@
 		"studentNumberCard": "s3825411",
 		"avatar": "https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fbriansolomon%2Ffiles%2F2016%2F04%2Fmark-zuckerberg.jpg",
 		"school": "SST",
-		"major": ["IT"],
+		"major": "IT",
 		"numberOfRecommended": 0,
 		"skills": [
 			"5c8a1f292f8fb814b56fa195",
