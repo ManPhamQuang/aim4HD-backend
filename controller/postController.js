@@ -33,7 +33,8 @@ exports.getPost = catchAsync(async (req, res, next) => {
       path: "author",
       populate: { path: "skills" },
     })
-    .populate("requiredSkills");
+    .populate("requiredSkills")
+    .populate("appliedStudents");
   if (!post) return next(new AppError("No Post found with a given ID", 404));
   res.status(200).json({
     status: "success",
