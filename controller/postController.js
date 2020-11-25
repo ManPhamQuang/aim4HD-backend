@@ -45,7 +45,10 @@ exports.getPost = catchAsync(async (req, res, next) => {
 });
 
 exports.createPost = catchAsync(async (req, res, next) => {
-  const post = await Post.create(req.body);
+  const post = await Post.create({
+    ...req.body,
+    author: req.user.id,
+  });
   res.status(201).json({
     status: "success",
     data: {
@@ -55,10 +58,14 @@ exports.createPost = catchAsync(async (req, res, next) => {
 });
 
 exports.updatePost = catchAsync(async (req, res, next) => {
-  const post = await Post.findByIdAndUpdate(req.params.id, req.body, {
-    runValidators: true,
-    new: true,
-  });
+  const post = await Post.findByIdAndUpdate(
+    req.params.id,
+    { ...req.body, author: req.user.id },
+    {
+      runValidators: true,
+      new: true,
+    }
+  );
   if (!post) return next(new AppError("No Post found with a given ID", 404));
   res.status(200).json({
     status: "success",

@@ -18,7 +18,7 @@ const userSchema = new mongoose.Schema(
       required: [true, "Name is required"],
     },
     description: { type: String, required: [true, "Description is required"] },
-    studentNumberCard: {
+    studentNumber: {
       type: String,
       required: [true, "Student Number is required"],
     },

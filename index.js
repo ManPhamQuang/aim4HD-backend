@@ -6,11 +6,14 @@ const postRouter = require("./route/postRoute");
 const courseRouter = require("./route/courseRoute");
 const globalErrorAppHandler = require("./controller/errorController");
 const AppError = require("./utils/appError");
+const cookieParser = require("cookie-parser");
 const app = express();
 
 app.use(cors());
 
 app.use(express.json());
+
+app.use(cookieParser());
 
 app.use("/api/v1/posts", postRouter);
 

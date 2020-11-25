@@ -7,13 +7,17 @@ const {
   updatePost,
   deletePost,
 } = require("../controller/postController");
+const { checkLogin } = require("../controller/authController");
 const commentRoute = require("./commentRoute");
 
 router.use("/:id/comments", commentRoute);
 
 router.get("/", getAllPosts);
-router.post("/", createPost);
 router.get("/:id", getPost);
+
+router.use(checkLogin);
+
+router.post("/", createPost);
 router.patch("/:id", updatePost);
 router.delete("/:id", deletePost);
 
