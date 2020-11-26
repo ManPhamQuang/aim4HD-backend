@@ -16,7 +16,7 @@ class ApiFeature {
 
   sort() {
     if (this.queryObj.sort) {
-      const sortCriteria = this.queryObj.sort.replace(",", " ");
+      const sortCriteria = this.queryObj.sort.replace(/,/g, " ");
       this.query.sort(sortCriteria);
     } else {
       this.query.sort("createdAt");
@@ -26,7 +26,7 @@ class ApiFeature {
 
   field() {
     if (this.queryObj.fields) {
-      const chosenFields = this.queryObj.fields.replace(",", " ");
+      const chosenFields = this.queryObj.fields.replace(/,/g, " ");
       this.query.select(chosenFields);
     } else {
       this.query.select("-__v");
