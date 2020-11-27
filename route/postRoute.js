@@ -15,7 +15,7 @@ router.use("/:id/comments", commentRoute);
 router.get("/", getAllPosts);
 router.get("/:id", getPost);
 
-router.use(checkLogin);
+// router.use(checkLogin);
 
 router.post("/", createPost);
 router.patch("/:id", updatePost);
