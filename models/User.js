@@ -17,14 +17,15 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: [true, "Name is required"],
     },
-    description: { type: String, required: [true, "Description is required"] },
+    description: { type: String },
     studentNumber: {
       type: String,
       required: [true, "Student Number is required"],
     },
     avatar: {
       type: String,
-      default: "default.png",
+      default:
+        "https://res.cloudinary.com/dybygufkr/image/upload/c_thumb,w_200,g_face/v1593000869/avatar_q2ysxd.jpg",
     },
     school: {
       type: String,
