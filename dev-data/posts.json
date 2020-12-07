@@ -53,7 +53,7 @@
 		],
 		"createdAt": "1605707422979",
 		"course": "5c8a1f292f8fb814b56fa175",
-		"appliedStudents": [],
+		"appliedStudents": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace696"],
 		"numberOfComments": 0
 	},
 	{
@@ -72,8 +72,8 @@
 		],
 		"createdAt": "1606115184653",
 		"course": "5c8a1f292f8fb814b56fa219",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace696", "5fab4912ffd1131f3cace697"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f05",
@@ -91,8 +91,8 @@
 		],
 		"createdAt": "1606116141840",
 		"course": "5c8a1f292f8fb814b56fa210",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace697", "5fab4912ffd1131f3cace698"],
+		"numberOfComments": 1
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f06",
@@ -110,8 +110,8 @@
 		],
 		"createdAt": "1606116350137",
 		"course": "5c8a1f292f8fb814b56fa211",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace699", "5fab4912ffd1131f3cace700"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f07",
@@ -129,8 +129,8 @@
 		],
 		"createdAt": "1606116435881",
 		"course": "5c8a1f292f8fb814b56fa191",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace695"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f08",
@@ -148,8 +148,8 @@
 		],
 		"createdAt": "1606116500030",
 		"course": "5c8a1f292f8fb814b56fa166",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace693", "5fab4912ffd1131f3cace699"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f09",
@@ -167,8 +167,8 @@
 		],
 		"createdAt": "1606224752014",
 		"course": "5c8a1f292f8fb814b56fa201",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace694", "5fab4912ffd1131f3cace700"],
+		"numberOfComments": 3
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f10",
@@ -186,8 +186,8 @@
 		],
 		"createdAt": "1606224752014",
 		"course": "5c8a1f292f8fb814b56fa204",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace699"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f11",
@@ -205,8 +205,8 @@
 		],
 		"createdAt": "1606224752014",
 		"course": "5c8a1f292f8fb814b56fa209",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace692", "5fab4912ffd1131f3cace698"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f12",
@@ -224,8 +224,8 @@
 		],
 		"createdAt": "1606224752014",
 		"course": "5c8a1f292f8fb814b56fa210",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace694", "5fab4912ffd1131f3cace697"],
+		"numberOfComments": 2
 	},
 	{
 		"_id": "5fbb674b0e67ce33c0539f13",
@@ -243,7 +243,7 @@
 		],
 		"createdAt": "1606224805902",
 		"course": "5c8a1f292f8fb814b56fa219",
-		"appliedStudents": [],
-		"numberOfComments": 0
+		"appliedStudents": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace700"],
+		"numberOfComments": 2
 	}
 ]
