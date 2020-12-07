@@ -31,7 +31,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 });
 
 exports.login = catchAsync(async (req, res, next) => {
-  const user = await User.find({ email: req.body.email });
+  const user = await User.findOne({ email: req.body.email });
   if (!user) return next(new AppError("No user found", 404));
   return await setCookieAndSendResponse(user.id, res, 200, {
     status: "success",
