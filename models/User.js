@@ -48,10 +48,16 @@ const userSchema = new mongoose.Schema(
         ref: "Skill",
       },
     ],
-    currentCourse: [
+    currentCourses: [
       {
         type: mongoose.Types.ObjectId,
         ref: "Course",
+      },
+    ],
+    interestedPosts: [
+      {
+        type: mongoose.Types.ObjectId,
+        ref: "Post",
       },
     ],
   },
