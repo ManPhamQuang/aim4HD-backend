@@ -60,7 +60,7 @@ const userSchema = new mongoose.Schema(
         ref: "Post",
       },
     ],
-    microsoftUniqueId: String,
+    microsoftUniqueId: { type: String, select: false },
   },
   {
     toJSON: { virtuals: true },
