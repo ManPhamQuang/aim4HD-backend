@@ -23,7 +23,8 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
 exports.getUser = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.params.id)
     .populate("skills")
-    .populate("currentCourse");
+    .populate("currentCourses")
+    .populate("interestedPosts");
   if (!user) return next(new AppError("No User found with a given ID", 404));
   res.status(200).json({ status: "success", data: { user } });
 });
