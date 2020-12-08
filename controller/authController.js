@@ -51,3 +51,19 @@ exports.checkLogin = catchAsync(async (req, res, next) => {
   req.user = user;
   next();
 });
+
+exports.checkIfLoginWithMicrosoft = catchAsync(async (req, res, next) => {
+  const user = await User.findOne({
+    microsoftUniqueId: req.body.microsoftUniqueId,
+  })
+    .populate("skills")
+    .populate("currentCourses")
+    .populate("interestedPosts");
+  if (!user) return next(new AppError("User not exist", 404));
+  res.status(200).json({
+    status: "success",
+    data: {
+      user,
+    },
+  });
+});
