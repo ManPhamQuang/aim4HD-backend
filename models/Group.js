@@ -8,6 +8,14 @@ const groupSchema = new mongoose.Schema(
         ref: "User",
       },
     ],
+    course: {
+      type: mongoose.Types.ObjectId,
+      ref: "Course",
+    },
+    createdAt: {
+      type: Date,
+      default: Date.now(),
+    },
   },
   {
     toJSON: { virtuals: true },
