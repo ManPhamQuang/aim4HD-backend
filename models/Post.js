@@ -56,6 +56,12 @@ const postSchema = new mongoose.Schema(
   }
 );
 
+postSchema.virtual("comments", {
+  ref: "Comment",
+  foreignField: "post",
+  localField: "_id",
+});
+
 postSchema.pre(/^find/, function (next) {
   this.find({
     isOpen: {

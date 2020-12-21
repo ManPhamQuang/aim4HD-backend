@@ -38,4 +38,4 @@ commentSchema.post(/^findOneAndDelete/, async function (doc, next) {
   next();
 });
 
-module.exports = new mongoose.model("comment", commentSchema);
+module.exports = new mongoose.model("Comment", commentSchema);

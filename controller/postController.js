@@ -1,6 +1,7 @@
 const Post = require("../models/Post");
 const Skill = require("../models/Skill");
 const User = require("../models/User");
+const Comment = require("../models/Comment");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const ApiFeature = require("../utils/ApiFeature");
@@ -38,7 +39,9 @@ exports.getPost = catchAsync(async (req, res, next) => {
     })
     .populate("requiredSkills")
     .populate("appliedStudents")
-    .populate("course");
+    .populate("course")
+    .populate({ path: "comments", populate: { path: "user" } });
+
   if (!post) return next(new AppError("No Post found with a given ID", 404));
   res.status(200).json({
     status: "success",
