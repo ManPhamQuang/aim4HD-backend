@@ -16,7 +16,7 @@ exports.createGroup = catchAsync(async (req, res, next) => {
 });
 
 exports.getUserGroup = catchAsync(async (req, res, next) => {
-  const groups = await Group.find({ members: { $in: req.body.userId } })
+  const groups = await Group.find({ members: { $in: req.params.userId } })
     .populate("members")
     .populate("course");
   return res.status(200).json({
