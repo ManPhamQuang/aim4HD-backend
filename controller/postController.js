@@ -6,10 +6,13 @@ const AppError = require("../utils/appError");
 const ApiFeature = require("../utils/ApiFeature");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
-  const currentQuery = Post.find().populate({
-    path: "author",
-    populate: { path: "skills" },
-  });
+  const currentQuery = Post.find()
+    .populate({
+      path: "author",
+      populate: { path: "skills" },
+    })
+    .populate({ path: "course" })
+    .populate({ path: "requiredSkills" });
 
   const { query } = new ApiFeature(currentQuery, { ...req.query })
     .filter()
@@ -34,7 +37,8 @@ exports.getPost = catchAsync(async (req, res, next) => {
       populate: { path: "skills" },
     })
     .populate("requiredSkills")
-    .populate("appliedStudents");
+    .populate("appliedStudents")
+    .populate("course");
   if (!post) return next(new AppError("No Post found with a given ID", 404));
   res.status(200).json({
     status: "success",
