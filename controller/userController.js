@@ -29,6 +29,7 @@ exports.getUser = catchAsync(async (req, res, next) => {
     .populate({
       path: "groups",
       populate: { path: "members", select: "email name avatar" },
+      populate: { path: "course", select: "name" },
     });
 
   if (!user) return next(new AppError("No User found with a given ID", 404));
