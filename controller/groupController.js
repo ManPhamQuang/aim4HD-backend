@@ -24,3 +24,22 @@ exports.getUserGroup = catchAsync(async (req, res, next) => {
     data: { groups },
   });
 });
+
+exports.updateGroup = catchAsync(async (req, res, next) => {
+  const group = await Group.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+  })
+    .populate("members")
+    .populate("course");
+  if (!group) return next(new AppError("No group found with a given ID", 404));
+  return res.status(200).json({
+    status: "success",
+    data: { group },
+  });
+});
+
+exports.deleteGroup = catchAsync(async (req, res, next) => {
+  const group = await Group.findByIdAndDelete(req.params.id);
+  if (!group) return next(new AppError("No group found with a given ID", 404));
+  res.status(204).end();
+});
