@@ -5,5 +5,187 @@
     "comment": "This guy works really hard. Highly recommend teammates",
     "isAnonymous": false,
     "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace691",
+    "user": "5fab4912ffd1131f3cace694",
+    "comment": "He is really responsible and supportive",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace691",
+    "user": "5fab4912ffd1131f3cace694",
+    "comment": "He always makes effort to excellently finish tasks",
+    "isAnonymous": false,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace692",
+    "user": "5fab4912ffd1131f3cace691",
+    "comment": "He is really responsible and good at coding",
+    "isAnonymous": false,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace692",
+    "user": "5fab4912ffd1131f3cace700",
+    "comment": "He is really responsible and good at coding",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace692",
+    "user": "5fab4912ffd1131f3cace699",
+    "comment": "He is supportive and helped me a lot during our group project",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace693",
+    "user": "5fab4912ffd1131f3cace699",
+    "comment": "He works really well and he is also good at coding.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace693",
+    "user": "5fab4912ffd1131f3cace698",
+    "comment": "He is a good leader and really supportive to each other.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace693",
+    "user": "5fab4912ffd1131f3cace697",
+    "comment": "He is supportive and helped me a lot during our group project.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace694",
+    "user": "5fab4912ffd1131f3cace693",
+    "comment": "She is good at creating an Website with HTML and CSS.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace694",
+    "user": "5fab4912ffd1131f3cace696",
+    "comment": "She is supportive and helped me a lot during our group project.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace694",
+    "user": "5fab4912ffd1131f3cace697",
+    "comment": "She is reponsible and a good leader.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace695",
+    "user": "5fab4912ffd1131f3cace691",
+    "comment": "He is reponsible and supportive.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace695",
+    "user": "5fab4912ffd1131f3cace694",
+    "comment": "Highly recommend this teammate.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace695",
+    "user": "5fab4912ffd1131f3cace698",
+    "comment": "I feel it is quite difficult to communicate with him .",
+    "isAnonymous": true,
+    "isRecommended": false
+  },
+  {
+    "author": "5fab4912ffd1131f3cace696",
+    "user": "5fab4912ffd1131f3cace698",
+    "comment": "A recommended teammate.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace697",
+    "user": "5fab4912ffd1131f3cace691",
+    "comment": "Highly recommend",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace697",
+    "user": "5fab4912ffd1131f3cace696",
+    "comment": "He is a good leader. Highly recommend.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace697",
+    "user": "5fab4912ffd1131f3cace700",
+    "comment": "He is really supportive and helped me a lot.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace698",
+    "user": "5fab4912ffd1131f3cace699",
+    "comment": "I feel it is quite difficult to communicate with her .",
+    "isAnonymous": true,
+    "isRecommended": false
+  },
+  {
+    "author": "5fab4912ffd1131f3cace698",
+    "user": "5fab4912ffd1131f3cace695",
+    "comment": "She works really well. Highly recommend.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace699",
+    "user": "5fab4912ffd1131f3cace693",
+    "comment": "She is really supportive and heplped me a lot.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace699",
+    "user": "5fab4912ffd1131f3cace692",
+    "comment": "She works really well. Highly recommend.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace699",
+    "user": "5fab4912ffd1131f3cace695",
+    "comment": "She has logical thiking so she is good at solving complicated problems.",
+    "isAnonymous": true,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace700",
+    "user": "5fab4912ffd1131f3cace691",
+    "comment": "He usually finished his given tasks late",
+    "isAnonymous": true,
+    "isRecommended": false
+  },
+  {
+    "author": "5fab4912ffd1131f3cace700",
+    "user": "5fab4912ffd1131f3cace700",
+    "comment": "He is a supportive teammate.",
+    "isAnonymous": false,
+    "isRecommended": true
+  },
+  {
+    "author": "5fab4912ffd1131f3cace700",
+    "user": "5fab4912ffd1131f3cace699",
+    "comment": "He usually had conflicts with other teammates .",
+    "isAnonymous": true,
+    "isRecommended": false
   }
 ]
