@@ -41,7 +41,7 @@ exports.updateFeedback = catchAsync(async (req, res, next) => {
     .populate("author")
     .populate("user");
   if (!feedback)
-    return next(new AppError("No feedback was found with a given ID"));
+    return next(new AppError("No feedback was found with a given ID", 404));
   return res.status(200).json({
     status: "success",
     data: { feedback },
@@ -51,6 +51,6 @@ exports.updateFeedback = catchAsync(async (req, res, next) => {
 exports.deleteFeedback = catchAsync(async (req, res, next) => {
   const feedback = await Feedback.findByIdAndDelete(req.params.id);
   if (!feedback)
-    return next(new AppError("No feedback was found with a given ID"));
+    return next(new AppError("No feedback was found with a given ID", 404));
   return res.status(204).end();
 });

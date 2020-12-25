@@ -8,9 +8,9 @@ const ApiFeature = require("../utils/ApiFeature");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
   const currentQuery = Post.find()
-    .populate({ path: "course" })
-    .populate({ path: "requiredSkills" });
-
+    .populate("course")
+    .populate("requiredSkills")
+    .populate("author");
   const { query } = new ApiFeature(currentQuery, { ...req.query })
     .filter()
     .sort()
@@ -31,7 +31,8 @@ exports.getPost = catchAsync(async (req, res, next) => {
   const post = await Post.findById(req.params.id)
     .populate("requiredSkills")
     .populate("appliedStudents")
-    .populate("course");
+    .populate("course")
+    .populate("author");
 
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
