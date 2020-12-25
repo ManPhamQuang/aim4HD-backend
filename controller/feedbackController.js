@@ -31,9 +31,13 @@ exports.createFeedback = catchAsync(async (req, res, next) => {
 });
 
 exports.updateFeedback = catchAsync(async (req, res, next) => {
-  const feedback = await Feedback.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-  })
+  const feedback = await Feedback.findByIdAndUpdate(
+    req.params.id,
+    { ...req.body, user: req.params.userId },
+    {
+      new: true,
+    }
+  )
     .populate("author")
     .populate("user");
   if (!feedback)
