@@ -38,6 +38,7 @@ exports.getUser = catchAsync(async (req, res, next) => {
       ],
     });
 
-  if (!user) return next(new AppError("No User found with a given ID", 404));
+  if (!user)
+    return next(new AppError("No User was found with a given ID", 404));
   res.status(200).json({ status: "success", data: { user } });
 });

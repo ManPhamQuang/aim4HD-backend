@@ -4,7 +4,7 @@ const ApiFeature = require("../utils/ApiFeature");
 const AppError = require("../utils/appError");
 
 exports.getAllComment = catchAsync(async (req, res, next) => {
-  const currentQuery = Comment.find({ post: req.params.id })
+  const currentQuery = Comment.find({ post: req.params.postId })
     .populate("user")
     .select("-post");
   const { query } = new ApiFeature(currentQuery, { ...req.query })
@@ -41,7 +41,7 @@ exports.updateComment = catchAsync(async (req, res, next) => {
     { new: true }
   );
   if (!comment)
-    return next(new AppError("No Comment found with a given ID", 404));
+    return next(new AppError("No Comment was found with a given ID", 404));
   res.status(200).json({
     status: "success",
     data: {
@@ -53,6 +53,6 @@ exports.updateComment = catchAsync(async (req, res, next) => {
 exports.deleteComment = catchAsync(async (req, res, next) => {
   const comment = await Comment.findByIdAndDelete(req.params.id);
   if (!comment)
-    return next(new AppError("No Comment found with a given ID", 404));
+    return next(new AppError("No Comment was found with a given ID", 404));
   res.status(204).end();
 });

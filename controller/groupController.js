@@ -31,7 +31,8 @@ exports.updateGroup = catchAsync(async (req, res, next) => {
   })
     .populate("members")
     .populate("course");
-  if (!group) return next(new AppError("No group found with a given ID", 404));
+  if (!group)
+    return next(new AppError("No group was found with a given ID", 404));
   return res.status(200).json({
     status: "success",
     data: { group },
@@ -40,6 +41,7 @@ exports.updateGroup = catchAsync(async (req, res, next) => {
 
 exports.deleteGroup = catchAsync(async (req, res, next) => {
   const group = await Group.findByIdAndDelete(req.params.id);
-  if (!group) return next(new AppError("No group found with a given ID", 404));
+  if (!group)
+    return next(new AppError("No group was found with a given ID", 404));
   res.status(204).end();
 });

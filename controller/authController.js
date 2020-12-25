@@ -23,7 +23,7 @@ exports.signup = catchAsync(async (req, res, next) => {
 
 exports.login = catchAsync(async (req, res, next) => {
   const user = await User.findOne({ email: req.body.email });
-  if (!user) return next(new AppError("No user found", 404));
+  if (!user) return next(new AppError("No user was found", 404));
   const token = await createJWT(user.id);
   return res.status(200).json({
     status: "success",
