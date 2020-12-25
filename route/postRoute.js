@@ -11,7 +11,7 @@ const {
 const { checkLogin } = require("../controller/authController");
 const commentRoute = require("./commentRoute");
 
-router.use("/:id/comments", commentRoute);
+router.use("/:postId/comments", commentRoute);
 
 router.get("/", getAllPosts);
 router.get("/:id", getPost);

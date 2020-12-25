@@ -5,7 +5,10 @@ const {
   login,
   checkIfLoginWithMicrosoft,
 } = require("../controller/authController");
+const feedbackRoute = require("./feedbackRoute");
 const router = express.Router();
+
+router.use("/:userId/feedbacks", feedbackRoute);
 
 router.get("/", getAllUsers);
 
