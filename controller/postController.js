@@ -8,10 +8,6 @@ const ApiFeature = require("../utils/ApiFeature");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
   const currentQuery = Post.find()
-    .populate({
-      path: "author",
-      populate: { path: "skills" },
-    })
     .populate({ path: "course" })
     .populate({ path: "requiredSkills" });
 
@@ -33,16 +29,12 @@ exports.getAllPosts = catchAsync(async (req, res, next) => {
 
 exports.getPost = catchAsync(async (req, res, next) => {
   const post = await Post.findById(req.params.id)
-    .populate({
-      path: "author",
-      populate: { path: "skills" },
-    })
     .populate("requiredSkills")
     .populate("appliedStudents")
-    .populate("course")
-    .populate({ path: "comments", populate: { path: "user" } });
+    .populate("course");
 
-  if (!post) return next(new AppError("No Post found with a given ID", 404));
+  if (!post)
+    return next(new AppError("No Post was found with a given ID", 404));
   res.status(200).json({
     status: "success",
     data: {
@@ -66,7 +58,8 @@ exports.updatePost = catchAsync(async (req, res, next) => {
     runValidators: true,
     new: true,
   });
-  if (!post) return next(new AppError("No Post found with a given ID", 404));
+  if (!post)
+    return next(new AppError("No Post was found with a given ID", 404));
   res.status(200).json({
     status: "success",
     data: {
@@ -77,7 +70,8 @@ exports.updatePost = catchAsync(async (req, res, next) => {
 
 exports.deletePost = catchAsync(async (req, res, next) => {
   const post = await Post.findByIdAndUpdate(req.params.id, { isOpen: false });
-  if (!post) return next(new AppError("No Post found with a given ID", 404));
+  if (!post)
+    return next(new AppError("No Post was found with a given ID", 404));
   res.status(204).end();
 });
 
@@ -90,7 +84,8 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
     );
   } else post.appliedStudents.push(currentUserId);
   await post.save();
-  if (!post) return next(new AppError("No Post found with a given ID", 404));
+  if (!post)
+    return next(new AppError("No Post was found with a given ID", 404));
   res.status(200).json({
     status: "success",
     data: {
