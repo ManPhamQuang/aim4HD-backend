@@ -48,6 +48,10 @@ const postSchema = new mongoose.Schema(
         ref: "User",
       },
     ],
+    approvedMembers: {
+      type: [{ type: mongoose.Types.ObjectId, ref: "User" }],
+      select: false,
+    },
     numberOfComments: { type: Number, default: 0 },
   },
   {
@@ -55,20 +59,5 @@ const postSchema = new mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
-
-postSchema.virtual("comments", {
-  ref: "Comment",
-  foreignField: "post",
-  localField: "_id",
-});
-
-postSchema.pre(/^find/, function (next) {
-  this.find({
-    isOpen: {
-      $ne: false,
-    },
-  });
-  next();
-});
 
 module.exports = new mongoose.model("Post", postSchema);
