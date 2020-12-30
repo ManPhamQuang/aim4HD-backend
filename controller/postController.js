@@ -28,12 +28,14 @@ exports.getAllPosts = catchAsync(async (req, res, next) => {
 });
 
 exports.getPost = catchAsync(async (req, res, next) => {
-  const post = await Post.findById(req.params.id)
+  const query = Post.findById(req.params.id)
     .populate("requiredSkills")
     .populate("appliedStudents")
     .populate("course")
     .populate("author");
-
+  if (req.query.author)
+    query.select("+approvedMembers").populate("approvedMembers");
+  const post = await query;
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
   res.status(200).json({
