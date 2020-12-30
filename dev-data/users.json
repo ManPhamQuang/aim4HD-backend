@@ -15,7 +15,7 @@
 			"5c8a1f292f8fb814b56fa186"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa174", "5c8a1f292f8fb814b56fa175"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f01"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f01"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace692",
@@ -33,7 +33,7 @@
 			"5c8a1f292f8fb814b56fa189"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa176", "5c8a1f292f8fb814b56fa177"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f02"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f02"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace693",
@@ -51,7 +51,7 @@
 			"5c8a1f292f8fb814b56fa186"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa178", "5c8a1f292f8fb814b56fa179"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f03"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f03"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace694",
@@ -69,7 +69,7 @@
 			"5c8a1f292f8fb814b56fa199"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa180", "5c8a1f292f8fb814b56fa181"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f04"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f04"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace695",
@@ -87,7 +87,7 @@
 			"5c8a1f292f8fb814b56fa187"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa181", "5c8a1f292f8fb814b56fa182"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f05"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f05"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace696",
@@ -105,7 +105,7 @@
 			"5c8a1f292f8fb814b56fa191"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa183", "5c8a1f292f8fb814b56fa184"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f06"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f06"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace697",
@@ -123,7 +123,7 @@
 			"5c8a1f292f8fb814b56fa214"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa185", "5c8a1f292f8fb814b56fa186"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f07"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f07"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace698",
@@ -141,7 +141,7 @@
 			"5c8a1f292f8fb814b56fa210"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa187", "5c8a1f292f8fb814b56fa188"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f08"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f08"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace699",
@@ -159,7 +159,7 @@
 			"5c8a1f292f8fb814b56fa216"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa189", "5c8a1f292f8fb814b56fa190"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f09"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f09"]
 	},
 	{
 		"_id": "5fab4912ffd1131f3cace700",
@@ -177,6 +177,6 @@
 			"5c8a1f292f8fb814b56fa213"
 		],
 		"currentCourses": ["5c8a1f292f8fb814b56fa191", "5c8a1f292f8fb814b56fa192"],
-		"interestedPosts": ["5fbb674b0e67ce33c0539f10"]
+		"savedPosts": ["5fbb674b0e67ce33c0539f10"]
 	}
 ]

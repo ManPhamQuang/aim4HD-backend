@@ -4,7 +4,6 @@ const userRouter = require("./route/userRoute");
 const skillRouter = require("./route/skillRoute");
 const postRouter = require("./route/postRoute");
 const courseRouter = require("./route/courseRoute");
-const groupRouter = require("./route/groupRoute");
 const globalErrorAppHandler = require("./controller/errorController");
 const AppError = require("./utils/appError");
 const cookieParser = require("cookie-parser");
@@ -23,8 +22,6 @@ app.use("/api/v1/users", userRouter);
 app.use("/api/v1/skills", skillRouter);
 
 app.use("/api/v1/courses", courseRouter);
-
-app.use("/api/v1/groups", groupRouter);
 
 app.all("*", (req, res, next) => {
   return next(

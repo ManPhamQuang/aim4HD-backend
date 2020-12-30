@@ -1,7 +1,6 @@
 const User = require("../models/User");
 const Skill = require("../models/Skill");
 const Course = require("../models/Course");
-const Group = require("../models/Group");
 const catchAsync = require("../utils/catchAsync");
 const ApiFeature = require("../utils/ApiFeature");
 const AppError = require("../utils/appError");
@@ -26,17 +25,7 @@ exports.getUser = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.params.id)
     .populate("skills")
     .populate("currentCourses")
-    .populate("interestedPosts")
-    .populate({
-      path: "groups",
-      populate: [
-        { path: "course", select: "name" },
-        {
-          path: "members",
-          select: "avatar name email",
-        },
-      ],
-    });
+    .populate("savedPosts");
 
   if (!user)
     return next(new AppError("No User was found with a given ID", 404));

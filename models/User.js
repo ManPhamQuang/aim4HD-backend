@@ -54,7 +54,7 @@ const userSchema = new mongoose.Schema(
         ref: "Course",
       },
     ],
-    interestedPosts: [
+    savedPosts: [
       {
         type: mongoose.Types.ObjectId,
         ref: "Post",
@@ -67,11 +67,5 @@ const userSchema = new mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
-
-userSchema.virtual("groups", {
-  ref: "Group",
-  localField: "_id",
-  foreignField: "members",
-});
 
 module.exports = new mongoose.model("User", userSchema);
