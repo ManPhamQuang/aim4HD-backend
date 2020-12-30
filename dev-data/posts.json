@@ -1,249 +1,270 @@
 [
-	{
-		"_id": "5fbb674b0e67ce33c0539f01",
-		"author": "5fab4912ffd1131f3cace691",
-		"title": "Looking for teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "HD",
-		"currentMember": 1,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa184",
-			"5c8a1f292f8fb814b56fa185",
-			"5c8a1f292f8fb814b56fa186"
-		],
-		"createdAt": "1605515544427",
-		"course": "5c8a1f292f8fb814b56fa175",
-		"appliedStudents": ["5fab4912ffd1131f3cace692", "5fab4912ffd1131f3cace695"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f02",
-		"author": "5fab4912ffd1131f3cace692",
-		"title": "We are recruiting teammates for building an ReactJS app",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "HD",
-		"currentMember": 1,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa184",
-			"5c8a1f292f8fb814b56fa185",
-			"5c8a1f292f8fb814b56fa186"
-		],
-		"createdAt": "1605515544427",
-		"course": "5c8a1f292f8fb814b56fa175",
-		"appliedStudents": ["5fab4912ffd1131f3cace693", "5fab4912ffd1131f3cace694"],
-		"numberOfComments": 0
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f03",
-		"author": "5fab4912ffd1131f3cace700",
-		"title": "Looking for 2 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "PA",
-		"currentMember": 2,
-		"maximumMember": 2,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa200",
-			"5c8a1f292f8fb814b56fa201",
-			"5c8a1f292f8fb814b56fa220"
-		],
-		"createdAt": "1605707422979",
-		"course": "5c8a1f292f8fb814b56fa175",
-		"appliedStudents": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace696"],
-		"numberOfComments": 0
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f04",
-		"author": "5fab4912ffd1131f3cace698",
-		"title": "Looking for 1 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "DI",
-		"currentMember": 2,
-		"maximumMember": 3,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa228",
-			"5c8a1f292f8fb814b56fa227",
-			"5c8a1f292f8fb814b56fa232"
-		],
-		"createdAt": "1606115184653",
-		"course": "5c8a1f292f8fb814b56fa219",
-		"appliedStudents": ["5fab4912ffd1131f3cace696", "5fab4912ffd1131f3cace697"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f05",
-		"author": "5fab4912ffd1131f3cace697",
-		"title": "Looking for 2 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "HD",
-		"currentMember": 2,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa237",
-			"5c8a1f292f8fb814b56fa221",
-			"5c8a1f292f8fb814b56fa215"
-		],
-		"createdAt": "1606116141840",
-		"course": "5c8a1f292f8fb814b56fa210",
-		"appliedStudents": ["5fab4912ffd1131f3cace697", "5fab4912ffd1131f3cace698"],
-		"numberOfComments": 1
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f06",
-		"author": "5fab4912ffd1131f3cace695",
-		"title": "Looking for 3 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "CR",
-		"currentMember": 2,
-		"maximumMember": 5,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa190",
-			"5c8a1f292f8fb814b56fa193",
-			"c8a1f292f8fb814b56fa186"
-		],
-		"createdAt": "1606116350137",
-		"course": "5c8a1f292f8fb814b56fa211",
-		"appliedStudents": ["5fab4912ffd1131f3cace699", "5fab4912ffd1131f3cace700"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f07",
-		"author": "5fab4912ffd1131f3cace693",
-		"title": "Looking for 2 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "CR",
-		"currentMember": 1,
-		"maximumMember": 3,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa189",
-			"5c8a1f292f8fb814b56fa243",
-			"55c8a1f292f8fb814b56fa258"
-		],
-		"createdAt": "1606116435881",
-		"course": "5c8a1f292f8fb814b56fa191",
-		"appliedStudents": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace695"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f08",
-		"author": "5fab4912ffd1131f3cace692",
-		"title": "Looking for 3 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "DI",
-		"currentMember": 1,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa194",
-			"5c8a1f292f8fb814b56fa190",
-			"5c8a1f292f8fb814b56fa184"
-		],
-		"createdAt": "1606116500030",
-		"course": "5c8a1f292f8fb814b56fa166",
-		"appliedStudents": ["5fab4912ffd1131f3cace693", "5fab4912ffd1131f3cace699"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f09",
-		"author": "5fab4912ffd1131f3cace699",
-		"title": "Looking for 1 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "DI",
-		"currentMember": 3,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa192",
-			"5c8a1f292f8fb814b56fa193",
-			"5c8a1f292f8fb814b56fa199"
-		],
-		"createdAt": "1606224752014",
-		"course": "5c8a1f292f8fb814b56fa201",
-		"appliedStudents": ["5fab4912ffd1131f3cace694", "5fab4912ffd1131f3cace700"],
-		"numberOfComments": 3
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f10",
-		"author": "5fab4912ffd1131f3cace700",
-		"title": "Looking for 3 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "HD",
-		"currentMember": 1,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa189",
-			"5c8a1f292f8fb814b56fa187",
-			"5c8a1f292f8fb814b56fa185"
-		],
-		"createdAt": "1606224752014",
-		"course": "5c8a1f292f8fb814b56fa204",
-		"appliedStudents": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace699"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f11",
-		"author": "5fab4912ffd1131f3cace691",
-		"title": "Looking for 2 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "DI",
-		"currentMember": 2,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa230",
-			"5c8a1f292f8fb814b56fa232",
-			"5c8a1f292f8fb814b56fa229"
-		],
-		"createdAt": "1606224752014",
-		"course": "5c8a1f292f8fb814b56fa209",
-		"appliedStudents": ["5fab4912ffd1131f3cace692", "5fab4912ffd1131f3cace698"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f12",
-		"author": "5fab4912ffd1131f3cace696",
-		"title": "Looking for 3 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "HD",
-		"currentMember": 1,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa241",
-			"5c8a1f292f8fb814b56fa244",
-			"5c8a1f292f8fb814b56fa245"
-		],
-		"createdAt": "1606224752014",
-		"course": "5c8a1f292f8fb814b56fa210",
-		"appliedStudents": ["5fab4912ffd1131f3cace694", "5fab4912ffd1131f3cace697"],
-		"numberOfComments": 2
-	},
-	{
-		"_id": "5fbb674b0e67ce33c0539f13",
-		"author": "5fab4912ffd1131f3cace699",
-		"title": "Looking for 1 teammates",
-		"content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
-		"aiming": "DI",
-		"currentMember": 3,
-		"maximumMember": 4,
-		"isOpen": true,
-		"requiredSkills": [
-			"5c8a1f292f8fb814b56fa213",
-			"5c8a1f292f8fb814b56fa214",
-			"5c8a1f292f8fb814b56fa209"
-		],
-		"createdAt": "1606224805902",
-		"course": "5c8a1f292f8fb814b56fa219",
-		"appliedStudents": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace700"],
-		"numberOfComments": 2
-	}
+  {
+    "_id": "5fbb674b0e67ce33c0539f01",
+    "author": "5fab4912ffd1131f3cace691",
+    "title": "Looking for teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "HD",
+    "currentMember": 1,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa184",
+      "5c8a1f292f8fb814b56fa185",
+      "5c8a1f292f8fb814b56fa186"
+    ],
+    "createdAt": "1605515544427",
+    "course": "5c8a1f292f8fb814b56fa175",
+    "appliedStudents": ["5fab4912ffd1131f3cace692", "5fab4912ffd1131f3cace695"],
+    "approvedMembers": ["5fab4912ffd1131f3cace691"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f02",
+    "author": "5fab4912ffd1131f3cace692",
+    "title": "We are recruiting teammates for building an ReactJS app",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "HD",
+    "currentMember": 1,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa184",
+      "5c8a1f292f8fb814b56fa185",
+      "5c8a1f292f8fb814b56fa186"
+    ],
+    "createdAt": "1605515544427",
+    "course": "5c8a1f292f8fb814b56fa175",
+    "appliedStudents": ["5fab4912ffd1131f3cace693", "5fab4912ffd1131f3cace694"],
+    "approvedMembers": ["5fab4912ffd1131f3cace692"],
+    "numberOfComments": 0
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f03",
+    "author": "5fab4912ffd1131f3cace700",
+    "title": "Looking for 2 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "PA",
+    "currentMember": 2,
+    "maximumMember": 2,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa200",
+      "5c8a1f292f8fb814b56fa201",
+      "5c8a1f292f8fb814b56fa220"
+    ],
+    "createdAt": "1605707422979",
+    "course": "5c8a1f292f8fb814b56fa175",
+    "appliedStudents": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace696"],
+    "approvedMembers": ["5fab4912ffd1131f3cace700", "5fab4912ffd1131f3cace695"],
+    "numberOfComments": 0
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f04",
+    "author": "5fab4912ffd1131f3cace698",
+    "title": "Looking for 1 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "DI",
+    "currentMember": 2,
+    "maximumMember": 3,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa228",
+      "5c8a1f292f8fb814b56fa227",
+      "5c8a1f292f8fb814b56fa232"
+    ],
+    "createdAt": "1606115184653",
+    "course": "5c8a1f292f8fb814b56fa219",
+    "appliedStudents": ["5fab4912ffd1131f3cace696", "5fab4912ffd1131f3cace697"],
+    "approvedMembers": ["5fab4912ffd1131f3cace698", "5fab4912ffd1131f3cace696"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f05",
+    "author": "5fab4912ffd1131f3cace697",
+    "title": "Looking for 2 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "HD",
+    "currentMember": 2,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa237",
+      "5c8a1f292f8fb814b56fa221",
+      "5c8a1f292f8fb814b56fa215"
+    ],
+    "createdAt": "1606116141840",
+    "course": "5c8a1f292f8fb814b56fa210",
+    "appliedStudents": ["5fab4912ffd1131f3cace698"],
+    "approvedMembers": ["5fab4912ffd1131f3cace697", "5fab4912ffd1131f3cace698"],
+    "numberOfComments": 1
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f06",
+    "author": "5fab4912ffd1131f3cace695",
+    "title": "Looking for 3 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "CR",
+    "currentMember": 2,
+    "maximumMember": 5,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa190",
+      "5c8a1f292f8fb814b56fa193",
+      "c8a1f292f8fb814b56fa186"
+    ],
+    "createdAt": "1606116350137",
+    "course": "5c8a1f292f8fb814b56fa211",
+    "appliedStudents": ["5fab4912ffd1131f3cace699", "5fab4912ffd1131f3cace700"],
+    "approvedMembers": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace700"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f07",
+    "author": "5fab4912ffd1131f3cace693",
+    "title": "Looking for 2 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "CR",
+    "currentMember": 1,
+    "maximumMember": 3,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa189",
+      "5c8a1f292f8fb814b56fa243",
+      "55c8a1f292f8fb814b56fa258"
+    ],
+    "createdAt": "1606116435881",
+    "course": "5c8a1f292f8fb814b56fa191",
+    "appliedStudents": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace695"],
+    "approvedMembers": ["5fab4912ffd1131f3cace693"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f08",
+    "author": "5fab4912ffd1131f3cace692",
+    "title": "Looking for 3 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "DI",
+    "currentMember": 1,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa194",
+      "5c8a1f292f8fb814b56fa190",
+      "5c8a1f292f8fb814b56fa184"
+    ],
+    "createdAt": "1606116500030",
+    "course": "5c8a1f292f8fb814b56fa166",
+    "appliedStudents": ["5fab4912ffd1131f3cace693", "5fab4912ffd1131f3cace699"],
+    "approvedMembers": ["5fab4912ffd1131f3cace692"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f09",
+    "author": "5fab4912ffd1131f3cace699",
+    "title": "Looking for 1 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "DI",
+    "currentMember": 3,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa192",
+      "5c8a1f292f8fb814b56fa193",
+      "5c8a1f292f8fb814b56fa199"
+    ],
+    "createdAt": "1606224752014",
+    "course": "5c8a1f292f8fb814b56fa201",
+    "appliedStudents": ["5fab4912ffd1131f3cace694", "5fab4912ffd1131f3cace700"],
+    "approvedMembers": [
+      "5fab4912ffd1131f3cace699",
+      "5fab4912ffd1131f3cace691",
+      "5fab4912ffd1131f3cace692"
+    ],
+    "numberOfComments": 3
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f10",
+    "author": "5fab4912ffd1131f3cace700",
+    "title": "Looking for 3 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "HD",
+    "currentMember": 1,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa189",
+      "5c8a1f292f8fb814b56fa187",
+      "5c8a1f292f8fb814b56fa185"
+    ],
+    "createdAt": "1606224752014",
+    "course": "5c8a1f292f8fb814b56fa204",
+    "appliedStudents": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace699"],
+    "approvedMembers": ["5fab4912ffd1131f3cace700"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f11",
+    "author": "5fab4912ffd1131f3cace691",
+    "title": "Looking for 2 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "DI",
+    "currentMember": 2,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa230",
+      "5c8a1f292f8fb814b56fa232",
+      "5c8a1f292f8fb814b56fa229"
+    ],
+    "createdAt": "1606224752014",
+    "course": "5c8a1f292f8fb814b56fa209",
+    "appliedStudents": ["5fab4912ffd1131f3cace692", "5fab4912ffd1131f3cace698"],
+    "approvedMembers": ["5fab4912ffd1131f3cace691", "5fab4912ffd1131f3cace699"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f12",
+    "author": "5fab4912ffd1131f3cace696",
+    "title": "Looking for 3 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "HD",
+    "currentMember": 1,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa241",
+      "5c8a1f292f8fb814b56fa244",
+      "5c8a1f292f8fb814b56fa245"
+    ],
+    "createdAt": "1606224752014",
+    "course": "5c8a1f292f8fb814b56fa210",
+    "appliedStudents": ["5fab4912ffd1131f3cace694", "5fab4912ffd1131f3cace697"],
+    "approvedMembers": ["5fab4912ffd1131f3cace696"],
+    "numberOfComments": 2
+  },
+  {
+    "_id": "5fbb674b0e67ce33c0539f13",
+    "author": "5fab4912ffd1131f3cace699",
+    "title": "Looking for 1 teammates",
+    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "aiming": "DI",
+    "currentMember": 3,
+    "maximumMember": 4,
+    "isOpen": true,
+    "requiredSkills": [
+      "5c8a1f292f8fb814b56fa213",
+      "5c8a1f292f8fb814b56fa214",
+      "5c8a1f292f8fb814b56fa209"
+    ],
+    "createdAt": "1606224805902",
+    "course": "5c8a1f292f8fb814b56fa219",
+    "appliedStudents": ["5fab4912ffd1131f3cace695", "5fab4912ffd1131f3cace700"],
+    "approvedMembers": [
+      "5fab4912ffd1131f3cace699",
+      "5fab4912ffd1131f3cace694",
+      "5fab4912ffd1131f3cace696"
+    ],
+    "numberOfComments": 2
+  }
 ]
