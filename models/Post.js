@@ -38,16 +38,18 @@ const postSchema = new mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
+    closedAt: {
+      type: Date,
+      select: false,
+    },
     course: {
       type: mongoose.Types.ObjectId,
       ref: "Course",
     },
-    appliedStudents: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: "User",
-      },
-    ],
+    appliedStudents: {
+      type: [{ type: mongoose.Types.ObjectId, ref: "User" }],
+      select: false,
+    },
     approvedMembers: {
       type: [{ type: mongoose.Types.ObjectId, ref: "User" }],
       select: false,
