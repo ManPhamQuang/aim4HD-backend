@@ -30,11 +30,14 @@ exports.getAllPosts = catchAsync(async (req, res, next) => {
 exports.getPost = catchAsync(async (req, res, next) => {
   const query = Post.findById(req.params.id)
     .populate("requiredSkills")
-    .populate("appliedStudents")
     .populate("course")
     .populate("author");
   if (req.query.author)
-    query.select("+approvedMembers").populate("approvedMembers");
+    query
+      .select("+approvedMembers")
+      .populate("approvedMembers")
+      .select("+appliedStudents")
+      .populate("appliedStudents");
   const post = await query;
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
@@ -47,7 +50,7 @@ exports.getPost = catchAsync(async (req, res, next) => {
 });
 
 exports.createPost = catchAsync(async (req, res, next) => {
-  const post = await Post.create(req.body);
+  const post = await Post.create({ ...req.body, createdAt: Date.now() });
   res.status(201).json({
     status: "success",
     data: {
@@ -57,10 +60,30 @@ exports.createPost = catchAsync(async (req, res, next) => {
 });
 
 exports.updatePost = catchAsync(async (req, res, next) => {
-  const post = await Post.findByIdAndUpdate(req.params.id, req.body, {
-    runValidators: true,
-    new: true,
-  });
+  let post;
+  const { approvedMembers, isOpen } = req.body;
+  if (approvedMembers) {
+    console.log("ENTER 1st BLOCK");
+    post = await Post.findById(req.params.id)
+      .select("+approvedMembers")
+      .select("+appliedStudents");
+    post.approvedMembers.push(req.body.approvedMembers);
+    post.appliedStudents = post.appliedStudents.filter(
+      studentId => studentId.toString() !== approvedMembers
+    );
+    await post.save();
+  } else if (isOpen === false) {
+    console.log("ENTER 2nd BLOCK");
+    post = await Post.findById(req.params.id).select("+closedAt");
+    post.isOpen = false;
+    post.closedAt = Date.now();
+    await post.save();
+  } else {
+    console.log("ENTER 3rd block");
+    post = await Post.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+  }
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
   res.status(200).json({
