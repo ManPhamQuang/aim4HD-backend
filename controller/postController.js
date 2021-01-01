@@ -119,3 +119,19 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+exports.getPostsAdmitted = catchAsync(async (req, res, next) => {
+  const posts = await Post.find({
+    approvedMembers: { $in: req.params.userId },
+  })
+    .select("+approvedMembers")
+    .populate("course")
+    .populate("approvedMembers");
+  res.status(200).json({
+    status: "success",
+    length: posts.length,
+    data: {
+      posts,
+    },
+  });
+});

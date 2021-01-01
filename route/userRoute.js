@@ -5,6 +5,7 @@ const {
   login,
   checkIfLoginWithMicrosoft,
 } = require("../controller/authController");
+const { getPostsAdmitted } = require("../controller/postController");
 const feedbackRoute = require("./feedbackRoute");
 const router = express.Router();
 
@@ -17,5 +18,7 @@ router.get("/:id", getUser);
 router.post("/login", login);
 router.post("/signup", signup);
 router.post("/check", checkIfLoginWithMicrosoft);
+
+router.get("/:userId/posts", getPostsAdmitted);
 
 module.exports = router;
