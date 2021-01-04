@@ -5,6 +5,7 @@ const Comment = require("../models/Comment");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const ApiFeature = require("../utils/ApiFeature");
+const sendEmail = require("../utils/sendEmail");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
   const currentQuery = Post.find()
@@ -72,6 +73,14 @@ exports.updatePost = catchAsync(async (req, res, next) => {
       studentId => studentId.toString() !== approvedMembers
     );
     await post.save();
+    const user = await User.findById(approvedMembers);
+    const response = await sendEmail({
+      email: "test@email",
+      subject: "Notify of getting accepted into group",
+      message: `This is a test.`,
+    });
+    console.log(post, user);
+    console.log(response);
   } else if (isOpen === false) {
     console.log("ENTER 2nd BLOCK");
     post = await Post.findById(req.params.id).select("+closedAt");
