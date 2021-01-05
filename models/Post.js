@@ -52,7 +52,6 @@ const postSchema = new mongoose.Schema(
     },
     approvedMembers: {
       type: [{ type: mongoose.Types.ObjectId, ref: "User" }],
-      select: false,
     },
     numberOfComments: { type: Number, default: 0 },
   },

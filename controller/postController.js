@@ -34,13 +34,10 @@ exports.getPost = catchAsync(async (req, res, next) => {
   const query = Post.findById(req.params.id)
     .populate("requiredSkills")
     .populate("course")
-    .populate("author");
+    .populate("author")
+    .populate("approvedMembers");
   if (req.query.author)
-    query
-      .select("+approvedMembers")
-      .populate("approvedMembers")
-      .select("+appliedStudents")
-      .populate("appliedStudents");
+    query.select("+appliedStudents").populate("appliedStudents");
   const post = await query;
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
@@ -67,9 +64,7 @@ exports.updatePost = catchAsync(async (req, res, next) => {
   const { approvedMembers, isOpen } = req.body;
   if (approvedMembers) {
     console.log("ENTER 1st BLOCK");
-    post = await Post.findById(req.params.id)
-      .select("+approvedMembers")
-      .select("+appliedStudents");
+    post = await Post.findById(req.params.id).select("+appliedStudents");
     post.approvedMembers.push(req.body.approvedMembers);
     post.appliedStudents = post.appliedStudents.filter(
       studentId => studentId.toString() !== approvedMembers
@@ -135,7 +130,6 @@ exports.getPostsAdmitted = catchAsync(async (req, res, next) => {
   const posts = await Post.find({
     approvedMembers: { $in: req.params.userId },
   })
-    .select("+approvedMembers")
     .populate("course")
     .populate("approvedMembers");
   res.status(200).json({
