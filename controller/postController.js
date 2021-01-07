@@ -101,7 +101,7 @@ exports.updatePost = catchAsync(async (req, res, next) => {
 });
 
 exports.deletePost = catchAsync(async (req, res, next) => {
-  const post = await Post.findByIdAndUpdate(req.params.id, { isOpen: false });
+  const post = await Post.findByIdAndDelete(req.params.id);
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
   res.status(204).end();
