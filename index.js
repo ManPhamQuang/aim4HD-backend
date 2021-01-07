@@ -1,19 +1,25 @@
 const express = require("express");
 const cors = require("cors");
+const helmet = require("helmet");
+const mongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const hpp = require("hpp");
+const compression = require("compression");
 const userRouter = require("./route/userRoute");
 const skillRouter = require("./route/skillRoute");
 const postRouter = require("./route/postRoute");
 const courseRouter = require("./route/courseRoute");
 const globalErrorAppHandler = require("./controller/errorController");
 const AppError = require("./utils/appError");
-const cookieParser = require("cookie-parser");
 const app = express();
 
 app.use(cors());
-
+app.use(helmet());
+app.use(mongoSanitize());
 app.use(express.json());
-
-app.use(cookieParser());
+app.use(xss());
+app.use(hpp());
+app.use(compression());
 
 app.use("/api/v1/posts", postRouter);
 
