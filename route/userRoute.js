@@ -1,5 +1,9 @@
 const express = require("express");
-const { getUser, getAllUsers } = require("../controller/userController");
+const {
+  getUser,
+  getAllUsers,
+  updateUser,
+} = require("../controller/userController");
 const {
   signup,
   login,
@@ -18,7 +22,7 @@ router.get("/:id", getUser);
 router.post("/login", login);
 router.post("/signup", signup);
 router.post("/check", checkIfLoginWithMicrosoft);
-
+router.patch("/update", updateUser);
 router.get("/:userId/posts", getPostsAdmitted);
 
 module.exports = router;

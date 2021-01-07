@@ -31,3 +31,19 @@ exports.getUser = catchAsync(async (req, res, next) => {
     return next(new AppError("No User was found with a given ID", 404));
   res.status(200).json({ status: "success", data: { user } });
 });
+
+exports.updateUser = catchAsync(async (req, res, next) => {
+  const userId = req.body.id;
+  const data = { ...req.body };
+  [
+    "microsoftUniqueId",
+    "savedPosts",
+    "numberOfRecommended",
+    "studentNumber",
+    "email",
+  ].forEach(field => delete data[field]);
+  const user = await User.findByIdAndUpdate(userId, data, { new: true });
+  if (!user)
+    return next(new AppError("No User was found with a given ID", 404));
+  res.status(200).json({ status: "success", data: { user } });
+});
