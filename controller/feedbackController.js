@@ -19,10 +19,15 @@ exports.createFeedback = catchAsync(async (req, res, next) => {
     author: req.body.author,
   });
   if (checkIfAlreadyGaveFeedback.length === 0) {
+    const targetUser = await User.findById(req.params.userId);
     const feedback = await Feedback.create({
       ...req.body,
       user: req.params.userId,
     });
+    targetUser.numberOfRecommended = req.body.isRecommended
+      ? targetUser.numberOfRecommended + 1
+      : targetUser.numberOfRecommended - 1;
+    await targetUser.save({ validateModifiedOnly: true });
     return res.status(201).json({
       status: "success",
       data: { feedback },
