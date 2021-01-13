@@ -131,7 +131,8 @@ exports.getPostsAdmitted = catchAsync(async (req, res, next) => {
     approvedMembers: { $in: req.params.userId },
   })
     .populate("course")
-    .populate("approvedMembers");
+    .populate("approvedMembers")
+    .select("+closedAt");
   res.status(200).json({
     status: "success",
     length: posts.length,
