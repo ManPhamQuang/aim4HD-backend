@@ -69,6 +69,10 @@ exports.updatePost = catchAsync(async (req, res, next) => {
     post.appliedStudents = post.appliedStudents.filter(
       studentId => studentId.toString() !== approvedMembers
     );
+    post.currentMember =
+      post.currentMember === post.maximumMember
+        ? post.maximumMember
+        : post.currentMember + 1;
     await post.save();
     // const user = await User.findById(approvedMembers);
     // const response = await sendEmail({
