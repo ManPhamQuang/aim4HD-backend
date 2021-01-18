@@ -131,7 +131,7 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
 });
 
 exports.getPostsInfo = catchAsync(async (req, res, next) => {
-  if (req.query.savedPost) {
+  if (req.query.savedPosts) {
     const user = await User.findById(req.params.userId).populate("savedPosts");
     const posts = user.savedPosts;
     return res.status(200).json({
