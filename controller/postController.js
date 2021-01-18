@@ -132,7 +132,11 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
 
 exports.getPostsInfo = catchAsync(async (req, res, next) => {
   if (req.query.savedPosts) {
-    const user = await User.findById(req.params.userId).populate("savedPosts");
+    const user = await User.findById(req.params.userId).populate({
+      path: "savedPosts",
+      select: "+appliedStudents",
+      populate: "course requiredSkills author appliedStudents",
+    });
     const posts = user.savedPosts;
     return res.status(200).json({
       status: "success",
