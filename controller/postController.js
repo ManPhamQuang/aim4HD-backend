@@ -112,7 +112,7 @@ exports.deletePost = catchAsync(async (req, res, next) => {
 });
 
 exports.applyForPost = catchAsync(async (req, res, next) => {
-  const post = await Post.findById(req.params.id);
+  const post = await Post.findById(req.params.id).select("+appliedStudents");
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
   const currentUserId = req.body.userId;
