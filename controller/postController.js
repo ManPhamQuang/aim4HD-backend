@@ -130,7 +130,19 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.getPostsAdmitted = catchAsync(async (req, res, next) => {
+exports.getPostsInfo = catchAsync(async (req, res, next) => {
+  if (req.query.savedPost) {
+    const user = await User.findById(req.params.userId).populate("savedPosts");
+    const posts = user.savedPosts;
+    return res.status(200).json({
+      status: "success",
+      length: posts.length,
+      data: {
+        posts: posts,
+      },
+    });
+  }
+
   const posts = await Post.find({
     approvedMembers: { $in: req.params.userId },
   })

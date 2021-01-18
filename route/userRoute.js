@@ -9,7 +9,7 @@ const {
   login,
   checkIfLoginWithMicrosoft,
 } = require("../controller/authController");
-const { getPostsAdmitted } = require("../controller/postController");
+const { getPostsInfo } = require("../controller/postController");
 const feedbackRoute = require("./feedbackRoute");
 const router = express.Router();
 
@@ -23,6 +23,6 @@ router.post("/login", login);
 router.post("/signup", signup);
 router.post("/check", checkIfLoginWithMicrosoft);
 router.patch("/update", updateUser);
-router.get("/:userId/posts", getPostsAdmitted);
+router.get("/:userId/posts", getPostsInfo);
 
 module.exports = router;
