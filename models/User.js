@@ -54,12 +54,10 @@ const userSchema = new mongoose.Schema(
         ref: "Course",
       },
     ],
-    savedPosts: [
-      {
-        type: mongoose.Types.ObjectId,
-        ref: "Post",
-      },
-    ],
+    savedPosts: {
+      type: [{ type: mongoose.Types.ObjectId, ref: "Post" }],
+      default: [],
+    },
     microsoftUniqueId: { type: String, select: false },
   },
   {
