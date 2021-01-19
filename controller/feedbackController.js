@@ -3,6 +3,14 @@ const catchAsync = require("../utils/catchAsync");
 const User = require("../models/User");
 const AppError = require("../utils/appError");
 exports.getAllFeedbackOfUser = catchAsync(async (req, res, next) => {
+  if (req.query.author) {
+    const feedbacks = await Feedback.find({ author: req.params.userId });
+    return res.status(200).json({
+      status: "success",
+      length: feedbacks.length,
+      data: { feedbacks },
+    });
+  }
   const feedbacks = await Feedback.find({ user: req.params.userId })
     .populate("author")
     .populate("user");
