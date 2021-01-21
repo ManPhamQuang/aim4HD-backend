@@ -64,7 +64,9 @@ exports.updatePost = catchAsync(async (req, res, next) => {
   const { approvedMembers, isOpen } = req.body;
   if (approvedMembers) {
     console.log("ENTER 1st BLOCK");
-    post = await Post.findById(req.params.id).select("+appliedStudents");
+    post = await Post.findById(req.params.id)
+      .select("+appliedStudents")
+      .populate("author");
     post.approvedMembers.push(req.body.approvedMembers);
     post.appliedStudents = post.appliedStudents.filter(
       studentId => studentId.toString() !== approvedMembers
@@ -74,14 +76,15 @@ exports.updatePost = catchAsync(async (req, res, next) => {
         ? post.maximumMember
         : post.currentMember + 1;
     await post.save();
-    // const user = await User.findById(approvedMembers);
-    // const response = await sendEmail({
-    //   email: "test@email",
-    //   subject: "Notify of getting accepted into group",
-    //   message: `This is a test.`,
-    // });
-    // console.log(post, user);
-    // console.log(response);
+    const user = await User.findById(approvedMembers);
+    const response = await sendEmail({
+      email: user.email,
+      subject: "Notify of getting accepted into group",
+      message: `Hey there ${user.name}. We are happy to announce that you have been approved to join the team on the post about ${post.title} by ${post.author.name}. We hoped you have a nice time with your teammate. </br>
+      Sincirely, Team aim4hd`,
+    });
+    console.log(post, user);
+    console.log(response);
   } else if (isOpen === false) {
     console.log("ENTER 2nd BLOCK");
     post = await Post.findById(req.params.id).select("+closedAt");
@@ -114,13 +117,13 @@ exports.deletePost = catchAsync(async (req, res, next) => {
 exports.applyForPost = catchAsync(async (req, res, next) => {
   if (req.query.savedPosts) {
     const currentUserId = req.body.userId;
-    const cuurentPostId = req.params.id;
+    const currentPostId = req.params.id;
     const user = await User.findById(currentUserId);
-    if (user.savedPosts.includes(cuurentPostId)) {
+    if (user.savedPosts.includes(currentPostId)) {
       user.savedPosts = user.savedPosts.filter(
-        postId => postId.toString() !== cuurentPostId
+        postId => postId.toString() !== currentPostId
       );
-    } else user.savedPosts.push(cuurentPostId);
+    } else user.savedPosts.push(currentPostId);
     await user.save({ validateModifiedOnly: true });
     return res.status(200).json({
       status: "success",
