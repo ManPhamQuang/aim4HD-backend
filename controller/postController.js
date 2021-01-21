@@ -50,7 +50,7 @@ exports.getPost = catchAsync(async (req, res, next) => {
 });
 
 exports.createPost = catchAsync(async (req, res, next) => {
-  const post = await Post.create({ ...req.body, createdAt: Date.now() });
+  const post = await Post.create({ ...req.body, createdAt: new Date() });
   res.status(201).json({
     status: "success",
     data: {

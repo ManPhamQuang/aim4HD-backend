@@ -23,8 +23,8 @@ exports.getAllComment = catchAsync(async (req, res, next) => {
 });
 
 exports.createComment = catchAsync(async (req, res, next) => {
-  const comment = await Comment.create(req.body);
-  res.status(200).json({
+  const comment = await Comment.create({ ...req.body, date: new Date() });
+  res.status(201).json({
     status: "success",
     data: {
       comment,
