@@ -81,11 +81,9 @@ exports.updatePost = catchAsync(async (req, res, next) => {
       email: user.email,
       subject: "Notify of getting accepted into group",
       message: `Dear ${user.name}, 
-      We are happy to announce that you have been approved to join the team on the post about ${post.title} by ${post.author.name}. We hoped you have a nice time with your teammate.
-      Sincirely, Team aim4hd`,
+    We are happy to announce that you have been approved to join the team on the post about ${post.title} by ${post.author.name}. We hoped you have a nice time with your teammate.
+    Sincirely, Team aim4hd`,
     });
-    console.log(post, user);
-    console.log(response);
   } else if (isOpen === false) {
     console.log("ENTER 2nd BLOCK");
     post = await Post.findById(req.params.id).select("+closedAt");
@@ -99,12 +97,13 @@ exports.updatePost = catchAsync(async (req, res, next) => {
     );
     post.currentMember = post.currentMember === 0 ? 0 : post.currentMember - 1;
     const user = await User.findById(removedMembers);
+    await post.save();
     const response = await sendEmail({
       email: user.email,
       subject: "Notify of getting removed from your group",
       message: `Dear ${user.name}, 
-      We are very sad to announce that that you have been kicked out of the group for ${post.course.name}. Please do not be sad, you can try our application again to look for an alternate group.
-      Sincerely, Team aim4hd`,
+    We are very sad to announce that that you have been kicked out of the group for ${post.course.name}. Please do not be sad, you can try our application again to look for an alternate group.
+    Sincerely, Team aim4hd`,
     });
   } else {
     console.log("ENTER 3rd block");
