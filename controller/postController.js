@@ -36,8 +36,8 @@ exports.getPost = catchAsync(async (req, res, next) => {
     .populate("course")
     .populate("author")
     .populate("approvedMembers");
-  if (req.query.author)
-    query.select("+appliedStudents").populate("appliedStudents");
+  // if (req.query.author)
+  query.select("+appliedStudents").populate("appliedStudents");
   const post = await query;
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
