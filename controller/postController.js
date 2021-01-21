@@ -112,6 +112,23 @@ exports.deletePost = catchAsync(async (req, res, next) => {
 });
 
 exports.applyForPost = catchAsync(async (req, res, next) => {
+  if (req.query.savedPosts) {
+    const currentUserId = req.body.userId;
+    const cuurentPostId = req.params.id;
+    const user = await User.findById(currentUserId);
+    if (user.savedPosts.includes(cuurentPostId)) {
+      user.savedPosts = user.savedPosts.filter(
+        postId => postId.toString() !== cuurentPostId
+      );
+    } else user.savedPosts.push(cuurentPostId);
+    await user.save({ validateModifiedOnly: true });
+    return res.status(200).json({
+      status: "success",
+      data: {
+        user,
+      },
+    });
+  }
   const post = await Post.findById(req.params.id).select("+appliedStudents");
   if (!post)
     return next(new AppError("No Post was found with a given ID", 404));
