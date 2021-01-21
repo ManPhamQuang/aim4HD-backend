@@ -96,14 +96,14 @@ exports.updatePost = catchAsync(async (req, res, next) => {
       studentId => studentId.toString() !== removedMembers
     );
     post.currentMember = post.currentMember === 0 ? 0 : post.currentMember - 1;
-    const user = await User.findById(removedMembers);
     await post.save();
+    const user = await User.findById(removedMembers);
     const response = await sendEmail({
       email: user.email,
       subject: "Notify of getting removed from your group",
-      message: `Dear ${user.name}, 
-    We are very sad to announce that that you have been kicked out of the group for ${post.course.name}. Please do not be sad, you can try our application again to look for an alternate group.
-    Sincerely, Team aim4hd`,
+      message: `Dear ${user.name},
+      We are very sad to announce that that you have been kicked out of the group for ${post.course.name}. Please do not be sad, you can try our application again to look for an alternate group.
+      Sincerely, Team aim4hd`,
     });
   } else {
     console.log("ENTER 3rd block");
