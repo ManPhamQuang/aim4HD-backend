@@ -61,7 +61,7 @@ exports.createPost = catchAsync(async (req, res, next) => {
 
 exports.updatePost = catchAsync(async (req, res, next) => {
   let post;
-  const { approvedMembers, isOpen } = req.body;
+  const { approvedMembers, isOpen, removedMembers } = req.body;
   if (approvedMembers) {
     console.log("ENTER 1st BLOCK");
     post = await Post.findById(req.params.id)
@@ -80,7 +80,8 @@ exports.updatePost = catchAsync(async (req, res, next) => {
     const response = await sendEmail({
       email: user.email,
       subject: "Notify of getting accepted into group",
-      message: `Hey there ${user.name}. We are happy to announce that you have been approved to join the team on the post about ${post.title} by ${post.author.name}. We hoped you have a nice time with your teammate. </br>
+      message: `Dear ${user.name}, 
+      We are happy to announce that you have been approved to join the team on the post about ${post.title} by ${post.author.name}. We hoped you have a nice time with your teammate.
       Sincirely, Team aim4hd`,
     });
     console.log(post, user);
@@ -91,6 +92,20 @@ exports.updatePost = catchAsync(async (req, res, next) => {
     post.isOpen = false;
     post.closedAt = Date.now();
     await post.save();
+  } else if (removedMembers) {
+    post = await Post.findById(req.params.id).populate("course");
+    post.approvedMembers = post.approvedMembers.filter(
+      studentId => studentId.toString() !== removedMembers
+    );
+    post.currentMember = post.currentMember === 0 ? 0 : post.currentMember - 1;
+    const user = await User.findById(removedMembers);
+    const response = await sendEmail({
+      email: user.email,
+      subject: "Notify of getting removed from your group",
+      message: `Dear ${user.name}, 
+      We are very sad to announce that that you have been kicked out of the group for ${post.course.name}. Please do not be sad, you can try our application again to look for an alternate group.
+      Sincerely, Team aim4hd`,
+    });
   } else {
     console.log("ENTER 3rd block");
     post = await Post.findByIdAndUpdate(req.params.id, req.body, {
