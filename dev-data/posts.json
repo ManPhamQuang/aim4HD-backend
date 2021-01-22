@@ -3,9 +3,9 @@
     "_id": "5fbb674b0e67ce33c0539f01",
     "author": "5fab4912ffd1131f3cace691",
     "title": "Looking for teammates",
-    "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam magnam sint culpa maxime est sequi nesciunt. Laudantium laborum odio, veritatis officiis iusto quibusdam ipsam, corporis, molestias omnis commodi laboriosam reprehenderit?",
+    "content": "I need to form a group of 4 for BITS. Please feel free to contact me",
     "aiming": "HD",
-    "currentMember": 1,
+    "currentMember": 3,
     "maximumMember": 4,
     "isOpen": true,
     "requiredSkills": [
@@ -13,11 +13,11 @@
       "5c8a1f292f8fb814b56fa185",
       "5c8a1f292f8fb814b56fa186"
     ],
-    "createdAt": "1605515544427",
+    "createdAt": "1611278535936",
     "course": "5c8a1f292f8fb814b56fa175",
     "appliedStudents": ["5fab4912ffd1131f3cace692", "5fab4912ffd1131f3cace695"],
-    "approvedMembers": ["5fab4912ffd1131f3cace691"],
-    "numberOfComments": 2
+    "approvedMembers": ["5fab4912ffd1131f3cace691","5fab4912ffd1131f3cace694","5fab4912ffd1131f3cace692"],
+    "numberOfComments": 3
   },
   {
     "_id": "5fbb674b0e67ce33c0539f02",
