@@ -3,7 +3,6 @@ dotenv.config({ path: "./config.env" });
 const mongoose = require("mongoose");
 const app = require("./index");
 
-console.log(process.env);
 
 mongoose
   .connect(
@@ -15,7 +14,7 @@ mongoose
       useFindAndModify: false,
     }
   )
-  .then(() => console.log("CONNECT TO DATABASE"))
+  .then(() => console.log("CONNECTED TO DATABASE"))
   .catch(e => console.log(e));
 
 const port = process.env.PORT || 3000;
