@@ -3,271 +3,316 @@
     "_id": "5c8a1f292f8fb814b56fa174",
     "name": "Introduction to IT",
     "code": "COSC2083",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa175",
     "name": "Introduction to computer system",
     "code": "COSC2500",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa176",
     "name": "Engineering Mathematics ",
     "code": "MATH2394",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa177",
     "name": "Engineering Computing 1",
     "code": "EEET2601 ",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa178",
     "name": "Introduction to Electrical and Electronic Engineering",
     "code": "EEET2603",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa179",
     "name": "Engineering Science",
     "code": "OENG120",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa180",
     "name": "Digital Fundamentals",
     "code": "OENG1207",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa181",
     "name": "Introduction to Professional Engineering Practice",
     "code": "OENG1181",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa182",
     "name": "Creative Engineering CAD",
     "code": "OENG1205",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa183",
     "name": "Advanced Manufacturing and Mechatronics: What We Make and How We Make It",
     "code": "MANU2518",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa184",
     "name": "Electrical Engineering 1",
     "code": "EEET2599",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa185",
     "name": "Digital System Design 1",
     "code": "EEET2604",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa186",
     "name": "Mathematics for ECE",
     "code": "MATH2263",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa187",
     "name": "Electronics",
     "code": "EEET2600",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa188",
     "name": "Signals and Systems 1",
     "code": "EEET2486",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa189",
     "name": "Introduction to Embedded Systems",
     "code": "EEET2505",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa190",
     "name": "Engineering Design 2",
     "code": "EEET2602",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   }
   ,
   {
     "_id": "5c8a1f292f8fb814b56fa191",
     "name": "Software Engineering Design(SE)",
     "code": "EEET2482",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa193",
     "name": "Communication Engineering 1",
     "code": "EEET2508",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa194",
     "name": "Engineering Design 3",
     "code": "EEET2610",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa195",
     "name": "Electronic Engineering 3",
     "code": "EEET2480",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa196",
     "name": "Signals and Systems 2",
     "code": "EEET2477",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa197",
     "name": "Electronic Circuits",
     "code": "EEET2479",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa198",
     "name": "Research Methods for Engineers",
     "code": "EEET2485",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa199",
     "name": "Embedded System Design and Implementation",
     "code": "EEET2481",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa200",
     "name": "Advanced Digital Design 1",
     "code": "EEET2475",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa201",
     "name": "Control Systems",
     "code": "EEET2506",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa202",
     "name": "Engineering Capstone Project Part Engineering Capstone Project Part A",
     "code": "OENG1183",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa203",
     "name": "Programing Project 1",
     "code": "COSC2502",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa204",
     "name": "Advanced Digital Design 2",
     "code": "EEET2476",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa205",
     "name": "Engineering Capstone Project Part B",
     "code": "OENG1185",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa206",
     "name": "Programing Project 2",
     "code": "COSC2503",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa207",
     "name": "Semiconductor Device Physics",
     "code": "EEET2605",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa208",
     "name": "Professional Engineering Experience",
     "code": "OENG1198",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa209",
     "name": "Internship (IT)",
     "code": "COSC2740",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa210",
     "name": "Engineering Mechanics",
     "code": "MIET2500",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa211",
     "name": "Stress Analysis",
     "code": "MIET2499",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa212",
     "name": "Mechanical Design",
     "code": "MIET2510",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa213",
     "name": "Design for Assembly and Automation",
     "code": "MANU2484",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa214",
     "name": "Materials Engineering",
     "code": "MANU2482",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa215",
     "name": "Autonomous Systems",
     "code": "MANU2480",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa216",
     "name": "Technology Leadership",
     "code": "OENG1130",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa217",
     "name": "Advanced Robotics",
     "code": "MANU2478",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa218",
     "name": "Automated System Design",
     "code": "MANU2476",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   },
   {
     "_id": "5c8a1f292f8fb814b56fa219",
     "name": "Computer Integrated Manufacturing",
     "code": "MANU2474",
-    "school": "5c8a1f292f8fb814b56fa166"
+    "school": "5c8a1f292f8fb814b56fa166",
+    "credit": 12
   }
 ]

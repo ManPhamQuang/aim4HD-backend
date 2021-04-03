@@ -3,6 +3,8 @@ dotenv.config({ path: "./config.env" });
 const mongoose = require("mongoose");
 const app = require("./index");
 
+console.log(process.env);
+
 mongoose
   .connect(
     process.env.DATABASE.replace("<password>", process.env.DATABASE_PASSWORD),

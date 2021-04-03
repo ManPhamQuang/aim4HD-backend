@@ -8,6 +8,7 @@ const courseSchema = new mongoose.Schema(
       type: mongoose.Types.ObjectId,
       ref: "School",
     },
+    credit: Number
   },
   {
     toJSON: { virtuals: true },
