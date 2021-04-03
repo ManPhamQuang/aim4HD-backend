@@ -59,6 +59,7 @@ const userSchema = new mongoose.Schema(
             default: [],
         },
         microsoftUniqueId: { type: String, select: false },
+        pastCoursesGrades: [{course: {type: mongoose.Types.ObjectId, ref: "Course"}, grade: String}],
         socialLinks: [],
     },
     {
