@@ -82,13 +82,26 @@ const userSchema = new mongoose.Schema(
         socialLinks: [
             new mongoose.Schema(
                 {
-                    name: { type: String, required: true },
+                    type: {
+                        type: String,
+                        required: true,
+                        enum: {
+                            values: [
+                                "Facebook",
+                                "Linkedin",
+                                "Instagram",
+                                "Github",
+                            ],
+                            message:
+                                'must be either "Facebook", "Linkedin", "Instagram" or "Github"',
+                        },
+                    },
                     url: { type: String, required: true },
                 },
                 { _id: false }
             ),
         ],
-        achivements: [
+        achievements: [
             new mongoose.Schema(
                 {
                     title: { type: String, required: true },
