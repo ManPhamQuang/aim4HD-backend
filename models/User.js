@@ -59,8 +59,44 @@ const userSchema = new mongoose.Schema(
             default: [],
         },
         microsoftUniqueId: { type: String, select: false },
-        pastCoursesGrades: [{course: {type: mongoose.Types.ObjectId, ref: "Course"}, grade: String}],
-        socialLinks: [],
+        pastCoursesGrades: [
+            new mongoose.Schema(
+                {
+                    course: {
+                        type: mongoose.Types.ObjectId,
+                        ref: "Course",
+                        required: true,
+                    },
+                    grade: {
+                        type: String,
+                        required: true,
+                        enum: {
+                            values: ["HD", "DI", "CR", "PA", "NN"],
+                            message: "must be either HD, DI, CR, PA ,NN",
+                        },
+                    },
+                },
+                { _id: false }
+            ),
+        ],
+        socialLinks: [
+            new mongoose.Schema(
+                {
+                    name: { type: String, required: true },
+                    url: { type: String, required: true },
+                },
+                { _id: false }
+            ),
+        ],
+        achivements: [
+            new mongoose.Schema(
+                {
+                    title: { type: String, required: true },
+                    url: { type: String, required: true },
+                },
+                { _id: false }
+            ),
+        ],
     },
     {
         toJSON: { virtuals: true },
