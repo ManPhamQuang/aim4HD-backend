@@ -107,7 +107,7 @@ const userSchema = new mongoose.Schema(
                     title: { type: String, required: true },
                     url: { type: String, required: true },
                 },
-                { _id: false }
+                { _id: false, default: [] }
             ),
         ],
     },
