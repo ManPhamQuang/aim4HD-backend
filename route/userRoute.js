@@ -1,13 +1,13 @@
 const express = require("express");
 const {
-  getUser,
-  getAllUsers,
-  updateUser,
+    getUser,
+    getAllUsers,
+    updateUser,
 } = require("../controller/userController");
 const {
-  signup,
-  login,
-  checkIfLoginWithMicrosoft,
+    signup,
+    login,
+    checkIfLoginWithMicrosoft,
 } = require("../controller/authController");
 const { getPostsInfo } = require("../controller/postController");
 const feedbackRoute = require("./feedbackRoute");

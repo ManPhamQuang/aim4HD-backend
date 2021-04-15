@@ -1,12 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const {
-  getAllPosts,
-  getPost,
-  createPost,
-  updatePost,
-  deletePost,
-  applyForPost,
+    getAllPosts,
+    getPost,
+    createPost,
+    updatePost,
+    deletePost,
+    applyForPost,
 } = require("../controller/postController");
 const { checkLogin } = require("../controller/authController");
 const commentRoute = require("./commentRoute");

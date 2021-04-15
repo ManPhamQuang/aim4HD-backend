@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router({ mergeParams: true });
 const {
-  getAllComment,
-  createComment,
-  updateComment,
-  deleteComment,
+    getAllComment,
+    createComment,
+    updateComment,
+    deleteComment,
 } = require("../controller/commentController");
 
 router.get("/", getAllComment);
