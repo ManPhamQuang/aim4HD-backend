@@ -2,10 +2,12 @@ const Post = require("../models/Post");
 const Skill = require("../models/Skill");
 const User = require("../models/User");
 const Comment = require("../models/Comment");
+const Notification = require("../models/Notification");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const ApiFeature = require("../utils/ApiFeature");
 const sendEmail = require("../utils/sendEmail");
+// const createNotification = require("./notificationController");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
     const currentQuery = Post.find()
@@ -129,6 +131,24 @@ exports.deletePost = catchAsync(async (req, res, next) => {
     res.status(204).end();
 });
 
+createNotification = async ({
+    sender,
+    receiver,
+    action,
+    content,
+    postLink,
+}) => {
+    const notification = await Notification.create({
+        sender: sender,
+        receiver: receiver,
+        action: action,
+        createdAt: new Date(),
+        postLink: postLink,
+        content: content,
+    });
+    return notification;
+};
+
 exports.applyForPost = catchAsync(async (req, res, next) => {
     if (req.query.savedPosts) {
         const currentUserId = req.body.userId;
@@ -151,17 +171,26 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
     if (!post)
         return next(new AppError("No Post was found with a given ID", 404));
     const currentUserId = req.body.userId;
+    const currentPostId = req.params.id;
     if (post.appliedStudents.includes(currentUserId)) {
         post.appliedStudents = post.appliedStudents.filter(
             (userId) => userId.toString() !== currentUserId
         );
     } else post.appliedStudents.push(currentUserId);
     await post.save();
+    let notification = await createNotification({
+        sender: currentUserId,
+        receiver: post.author,
+        action: "applied to post",
+        postLink: currentPostId,
+        content: "",
+    });
     res.status(200).json({
         status: "success",
         data: {
             post,
         },
+        notification: notification,
     });
 });
 
