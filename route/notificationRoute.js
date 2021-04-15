@@ -7,6 +7,7 @@ const express = require("express");
 const {
     getNotificationOfUser,
     createNotification,
+    markNotificationRead,
 } = require("../controller/notificationController");
 // const {
 //     signup,
@@ -19,6 +20,7 @@ const router = express.Router();
 
 router.get("/:id", getNotificationOfUser);
 router.post("/", createNotification);
+router.patch("/", markNotificationRead);
 // router.use("/:userId/feedbacks", feedbackRoute);
 
 // router.get("/", getAllUsers);

@@ -44,9 +44,23 @@ exports.createNotification = catchAsync(async (req, res, next) => {
     });
 });
 // TODO: CREATE MARK NOTIFICATION READ API CONTROLLER AND ROUTE
-// exports.markNotificationRead = catchAsync(async (req, res, next) => {
-//     const {};
-// });
+exports.markNotificationRead = catchAsync(async (req, res, next) => {
+    const notificationId = req.body.id;
+    const data = { ...req.body };
+    const notification = await Notification.findByIdAndUpdate(
+        notificationId,
+        data,
+        {
+            new: true,
+            runValidators: true,
+        }
+    );
+    if (!notification)
+        return next(
+            new AppError("No Notification was found with a given ID", 404)
+        );
+    res.status(200).json({ status: "success", data: { notification } });
+});
 // exports.getAllUsers = catchAsync(async (req, res, next) => {
 //     const { query } = new ApiFeature(User.find(), { ...req.query })
 //         .filter()
