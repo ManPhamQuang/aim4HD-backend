@@ -84,8 +84,8 @@ const userSchema = new mongoose.Schema(
                 {
                     facebook: String,
                     linkedin: String,
-                    Instagram: String,
-                    Github: String,
+                    instagram: String,
+                    github: String,
                 },
                 { _id: false }
             ),
