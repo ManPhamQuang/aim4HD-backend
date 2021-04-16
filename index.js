@@ -13,6 +13,29 @@ const notificationRouter = require("./route/notificationRoute");
 const globalErrorAppHandler = require("./controller/errorController");
 const AppError = require("./utils/appError");
 const app = express();
+const http = require("http").createServer(app);
+// const io = require("socket.io")(http);
+const io = require("socket.io")(http, {
+    cors: {
+        origin: "http://localhost:3000",
+        methods: ["GET", "POST"],
+    },
+});
+
+http.listen(4000, function () {
+    console.log("socket.io is listening on port 4000");
+});
+
+io.on("connection", (socket) => {
+    console.log(`Client with ID of ${socket.id} connected!`);
+    socket.emit("message", { data: "big data" });
+    socket.on("disconnect", () => {
+        console.log("disconnected");
+    });
+    socket.on("error", function (err) {
+        console.log(err);
+    });
+});
 
 app.use(cors());
 app.use(helmet());
