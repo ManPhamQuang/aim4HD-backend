@@ -7,7 +7,7 @@ const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 const ApiFeature = require("../utils/ApiFeature");
 const sendEmail = require("../utils/sendEmail");
-// const createNotification = require("./notificationController");
+const { createNoti } = require("./notificationController");
 
 exports.getAllPosts = catchAsync(async (req, res, next) => {
     const currentQuery = Post.find()
@@ -131,24 +131,6 @@ exports.deletePost = catchAsync(async (req, res, next) => {
     res.status(204).end();
 });
 
-createNotification = async ({
-    sender,
-    receiver,
-    action,
-    content,
-    postLink,
-}) => {
-    const notification = await Notification.create({
-        sender: sender,
-        receiver: receiver,
-        action: action,
-        createdAt: new Date(),
-        postLink: postLink,
-        content: content,
-    });
-    return notification;
-};
-
 exports.applyForPost = catchAsync(async (req, res, next) => {
     if (req.query.savedPosts) {
         const currentUserId = req.body.userId;
@@ -178,7 +160,7 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
         );
     } else post.appliedStudents.push(currentUserId);
     await post.save();
-    let notification = await createNotification({
+    let notification = await createNoti({
         sender: currentUserId,
         receiver: post.author,
         action: "applied to post",

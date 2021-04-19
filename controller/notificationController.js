@@ -5,6 +5,8 @@ const Notification = require("../models/Notification");
 const catchAsync = require("../utils/catchAsync");
 const ApiFeature = require("../utils/ApiFeature");
 const AppError = require("../utils/appError");
+const socketInstance = require("../socket-instance");
+const io = socketInstance.io;
 
 const actionvalues = [
     "applied to post",
@@ -27,6 +29,65 @@ exports.getNotificationOfUser = catchAsync(async (req, res, next) => {
         );
     res.status(200).json({ status: "sucess", data: { notifications } });
 });
+
+exports.createNoti = async ({
+    sender,
+    receiver,
+    action,
+    content,
+    postLink,
+}) => {
+    const notification = await Notification.create({
+        sender: sender,
+        receiver: receiver,
+        action: action,
+        createdAt: new Date(),
+        postLink: postLink,
+        content: content,
+    });
+    //  io.on("connection", function (socket) {
+    //         console.log(`Client with ID of ${socket.id} connected!`);
+    //         socket.on("getNotification", async (data) => {
+    //             console.log("getNotification event");
+    //             console.log(data);
+    //             const notifications = await Notification.find({
+    //                 receiver: data.id,
+    //             });
+    //             console.log(notifications);
+    //             // let notifications = ["h1"];
+    //             socket.emit("notifications", { notifications: notifications });
+    //         });
+    //         // socket.emit("message", { data: "big data" });
+    //         socket.on("disconnect", () => {
+    //             console.log("disconnected");
+    //         });
+    //         socket.on("error", function (err) {
+    //             console.log(err);
+    //         });
+    //   });
+    socketInstance.io.emit("newNoti", notification);
+    // io.on("connection", function (socket) {
+    //     console.log(`Client with ID of ${socket.id} connected!`);
+    //     socket.on("getNotification", async (data) => {
+    //         console.log("getNotification event");
+    //         console.log(data);
+    //         const notifications = await Notification.find({
+    //             receiver: data.id,
+    //         });
+    //         console.log(notifications);
+    //         // let notifications = ["h1"];
+    //         socket.emit("notifications", { notifications: notifications });
+    //     });
+    //     // socket.emit("message", { data: "big data" });
+    //     socket.on("disconnect", () => {
+    //         console.log("disconnected");
+    //     });
+    //     socket.on("error", function (err) {
+    //         console.log(err);
+    //     });
+    // });
+    return notification;
+};
 
 exports.createNotification = catchAsync(async (req, res, next) => {
     const sender = await User.findById(req.body.sender);
@@ -61,50 +122,3 @@ exports.markNotificationRead = catchAsync(async (req, res, next) => {
         );
     res.status(200).json({ status: "success", data: { notification } });
 });
-// exports.getAllUsers = catchAsync(async (req, res, next) => {
-//     const { query } = new ApiFeature(User.find(), { ...req.query })
-//         .filter()
-//         .sort()
-//         .field()
-//         .paginate();
-
-//     const user = await query;
-//     res.status(200).json({
-//         status: "success",
-//         length: user.length,
-//         data: {
-//             user,
-//         },
-//     });
-// });
-
-// exports.getUser = catchAsync(async (req, res, next) => {
-// const user = await User.findById(req.params.id)
-//         .populate("skills")
-//         .populate("currentCourses")
-//         .populate("savedPosts")
-//         .populate("pastCoursesGrades.course");
-
-//     if (!user)
-//         return next(new AppError("No User was found with a given ID", 404));
-//     res.status(200).json({ status: "success", data: { user } });
-// });
-
-// exports.updateUser = catchAsync(async (req, res, next) => {
-//     const userId = req.body.id;
-//     const data = { ...req.body };
-//     [
-//         "microsoftUniqueId",
-//         "savedPosts",
-//         "numberOfRecommended",
-//         "studentNumber",
-//         "email",
-//     ].forEach((field) => delete data[field]);
-//     const user = await User.findByIdAndUpdate(userId, data, {
-//         new: true,
-//         runValidators: true,
-//     });
-//     if (!user)
-//         return next(new AppError("No User was found with a given ID", 404));
-//     res.status(200).json({ status: "success", data: { user } });
-// });

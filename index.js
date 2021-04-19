@@ -9,32 +9,68 @@ const userRouter = require("./route/userRoute");
 const skillRouter = require("./route/skillRoute");
 const postRouter = require("./route/postRoute");
 const courseRouter = require("./route/courseRoute");
-const notificationRouter = require("./route/notificationRoute");
 const globalErrorAppHandler = require("./controller/errorController");
+const Notification = require("./models/Notification");
 const AppError = require("./utils/appError");
 const app = express();
 const http = require("http").createServer(app);
-// const io = require("socket.io")(http);
-const io = require("socket.io")(http, {
-    cors: {
-        origin: "http://localhost:3000",
-        methods: ["GET", "POST"],
-    },
-});
+const socket = require("./socket-instance");
+socket.configure(http);
 
-http.listen(4000, function () {
-    console.log("socket.io is listening on port 4000");
-});
-
-io.on("connection", (socket) => {
+socket.io.on("connection", function (socket) {
     console.log(`Client with ID of ${socket.id} connected!`);
-    socket.emit("message", { data: "big data" });
+    socket.on("getNotification", async (data) => {
+        console.log("getNotification event");
+        console.log(data);
+        const notifications = await Notification.find({
+            receiver: data.id,
+        });
+        console.log(notifications);
+        // let notifications = ["h1"];
+        socket.emit("notifications", { notifications: notifications });
+    });
+    // socket.emit("message", { data: "big data" });
     socket.on("disconnect", () => {
         console.log("disconnected");
     });
     socket.on("error", function (err) {
         console.log(err);
     });
+});
+
+// io.on("connection", function (socket) {
+//     console.log(`Client with ID of ${socket.id} connected!`);
+//     socket.on("getNotification", async (data) => {
+//         console.log("getNotification event");
+//         console.log(data);
+//         const notifications = await Notification.find({
+//             receiver: data.id,
+//         });
+//         console.log(notifications);
+//         // let notifications = ["h1"];
+//         socket.emit("notifications", { notifications: notifications });
+//     });
+//     // socket.emit("message", { data: "big data" });
+//     socket.on("disconnect", () => {
+//         console.log("disconnected");
+//     });
+//     socket.on("error", function (err) {
+//         console.log(err);
+//     });
+// });
+
+// const io = require("socket.io")(http);
+// const io = require("socket.io")(http, {
+//     cors: {
+//         origin: "http://localhost:3000",
+//         methods: ["GET", "POST"],
+//     },
+// });
+
+const notificationRouter = require("./route/notificationRoute");
+
+http.listen(4000, function () {
+    console.log("socket.io is listening on port 4000");
 });
 
 app.use(cors());
