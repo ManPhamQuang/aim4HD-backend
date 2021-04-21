@@ -163,9 +163,8 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
     let notification = await createNoti({
         sender: currentUserId,
         receiver: post.author,
-        action: "applied to post",
+        action: "applied to your post",
         postLink: currentPostId,
-        content: "",
     });
     res.status(200).json({
         status: "success",

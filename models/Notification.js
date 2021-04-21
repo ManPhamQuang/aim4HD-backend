@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const actionValues = [
-    "applied to post",
+    "applied to your post",
     "applied to a post you're in",
     "approved your application",
     "uploaded a new post",

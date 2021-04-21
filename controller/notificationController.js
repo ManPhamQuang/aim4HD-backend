@@ -9,7 +9,7 @@ const socketInstance = require("../socket-instance");
 const io = socketInstance.io;
 
 const actionvalues = [
-    "applied to post",
+    "applied to your post",
     "applied to a post you're in",
     "approved your application",
     "uploaded a new post",
@@ -31,19 +31,21 @@ exports.getNotificationOfUser = catchAsync(async (req, res, next) => {
 });
 
 exports.createNoti = async ({
-    sender,
-    receiver,
+    sender: senderId,
+    receiver: receiverId,
     action,
-    content,
     postLink,
 }) => {
+    const sender = await User.findById(senderId);
+    const receiver = await User.findById(receiverId);
     const notification = await Notification.create({
-        sender: sender,
-        receiver: receiver,
+        sender: senderId,
+        receiver: receiverId,
         action: action,
         createdAt: new Date(),
         postLink: postLink,
-        content: content,
+        createdAt: new Date(),
+        content: `${sender.name} ${action} ${receiver.name}`,
     });
     //  io.on("connection", function (socket) {
     //         console.log(`Client with ID of ${socket.id} connected!`);
