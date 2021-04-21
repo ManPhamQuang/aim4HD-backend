@@ -17,7 +17,7 @@ const server = require("http").createServer(app);
 const socket = require("./socket-instance");
 socket.configure(server);
 
-server.listen(3000);
+// server.listen(3000);
 
 socket.io.on("connection", function (socket) {
     console.log(`Client with ID of ${socket.id} connected!`);
