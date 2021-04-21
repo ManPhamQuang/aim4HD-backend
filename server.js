@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config.env" });
 const mongoose = require("mongoose");
-const app = require("./index");
+const server = require("./index");
 
 mongoose
     .connect(
@@ -20,8 +20,9 @@ mongoose
     .catch((e) => console.log(e));
 
 const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
-    console.log(`App running on port ${port}...`);
+
+server.listen(port, () => {
+    console.log("express and socket running on 5000");
 });
 
 process.on("unhandledRejection", (err) => {

@@ -17,7 +17,9 @@ const server = require("http").createServer(app);
 const socket = require("./socket-instance");
 socket.configure(server);
 
-// server.listen(3000);
+// server.listen(5000, () => {
+//     console.log("express and socket running on 5000");
+// });
 
 socket.io.on("connection", function (socket) {
     console.log(`Client with ID of ${socket.id} connected!`);
@@ -75,4 +77,4 @@ app.all("*", (req, res, next) => {
 
 app.use(globalErrorAppHandler);
 
-module.exports = app;
+module.exports = server;
