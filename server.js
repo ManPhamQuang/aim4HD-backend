@@ -19,21 +19,21 @@ mongoose
     .then(() => console.log("CONNECTED TO DATABASE"))
     .catch((e) => console.log(e));
 
-const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
-    console.log(`App running on port ${port}...`);
-});
+// const port = process.env.PORT || 3000;
+// const server = app.listen(port, () => {
+//     console.log(`App running on port ${port}...`);
+// });
 
-process.on("unhandledRejection", (err) => {
-    console.log(err.name, err.message);
-    server.close(() => {
-        process.exit(1);
-    });
-});
+// process.on("unhandledRejection", (err) => {
+//     console.log(err.name, err.message);
+//     server.close(() => {
+//         process.exit(1);
+//     });
+// });
 
-process.on("uncaughtException", (err) => {
-    console.log(err.name, err.message);
-    server.close(() => {
-        process.exit(1);
-    });
-});
+// process.on("uncaughtException", (err) => {
+//     console.log(err.name, err.message);
+//     server.close(() => {
+//         process.exit(1);
+//     });
+// });

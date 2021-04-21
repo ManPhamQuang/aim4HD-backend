@@ -13,9 +13,11 @@ const globalErrorAppHandler = require("./controller/errorController");
 const Notification = require("./models/Notification");
 const AppError = require("./utils/appError");
 const app = express();
-const http = require("http").createServer(app);
+const server = require("http").createServer(app);
 const socket = require("./socket-instance");
-socket.configure(http);
+socket.configure(server);
+
+server.listen(3000);
 
 socket.io.on("connection", function (socket) {
     console.log(`Client with ID of ${socket.id} connected!`);
