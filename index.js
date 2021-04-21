@@ -20,12 +20,12 @@ socket.configure(http);
 socket.io.on("connection", function (socket) {
     console.log(`Client with ID of ${socket.id} connected!`);
     socket.on("getNotification", async (data) => {
-        console.log("getNotification event");
-        console.log(data);
+        // console.log("getNotification event");
+        // console.log(data);
         const notifications = await Notification.find({
             receiver: data.id,
         });
-        console.log(notifications);
+        // console.log(notifications);
         // let notifications = ["h1"];
         socket.emit("notifications", { notifications: notifications });
     });
@@ -38,40 +38,11 @@ socket.io.on("connection", function (socket) {
     });
 });
 
-// io.on("connection", function (socket) {
-//     console.log(`Client with ID of ${socket.id} connected!`);
-//     socket.on("getNotification", async (data) => {
-//         console.log("getNotification event");
-//         console.log(data);
-//         const notifications = await Notification.find({
-//             receiver: data.id,
-//         });
-//         console.log(notifications);
-//         // let notifications = ["h1"];
-//         socket.emit("notifications", { notifications: notifications });
-//     });
-//     // socket.emit("message", { data: "big data" });
-//     socket.on("disconnect", () => {
-//         console.log("disconnected");
-//     });
-//     socket.on("error", function (err) {
-//         console.log(err);
-//     });
-// });
-
-// const io = require("socket.io")(http);
-// const io = require("socket.io")(http, {
-//     cors: {
-//         origin: "http://localhost:3000",
-//         methods: ["GET", "POST"],
-//     },
-// });
-
 const notificationRouter = require("./route/notificationRoute");
 
-http.listen(4000, function () {
-    console.log("socket.io is listening on port 4000");
-});
+// http.listen(4000, function () {
+//     console.log("socket.io is listening on port 4000");
+// });
 
 app.use(cors());
 app.use(helmet());
