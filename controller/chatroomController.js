@@ -13,46 +13,53 @@ const ChatRoom = require("../models/ChatRoom");
 exports.initiateChat = catchAsync(async (req, res, next) => {
     // to start a new chat room between an array of user ids
     const { userIds, type, chatInitiator } = req.body;
-    try {
-        const availableRoom = await ChatRoom.findOne({
-            userIds: {
-                $size: userIds.length,
-                $all: [...userIds],
-            },
-            type,
+    if (!userIds || !type || !chatInitiator) {
+        res.status(400).json({
+            status: "failed",
+            message: "Please provide userids, type, chatInitiator",
         });
-
-        if (availableRoom) {
-            res.status(200).json({
-                status: "success",
-                data: {
-                    isNew: false,
-                    message: "retrieving an old chat room",
-                    chatRoomId: availableRoom._id,
-                    type: availableRoom.type,
+    } else {
+        try {
+            const availableRoom = await ChatRoom.findOne({
+                userIds: {
+                    $size: userIds.length,
+                    $all: [...userIds],
                 },
-            });
-        }
-
-        if (!availableRoom) {
-            const newRoom = await ChatRoom.create({
-                userIds,
                 type,
-                chatInitiator,
             });
-            res.status(200).json({
-                status: "success",
-                data: {
-                    isNew: true,
-                    message: "creating a new chatroom",
-                    chatRoomId: newRoom._id,
-                    type: newRoom.type,
-                },
-            });
+
+            if (availableRoom) {
+                res.status(200).json({
+                    status: "success",
+                    data: {
+                        isNew: false,
+                        message: "retrieving an old chat room",
+                        chatRoomId: availableRoom._id,
+                        type: availableRoom.type,
+                    },
+                });
+            }
+
+            if (!availableRoom) {
+                const newRoom = await ChatRoom.create({
+                    userIds,
+                    type,
+                    chatInitiator,
+                });
+                res.status(200).json({
+                    status: "success",
+                    data: {
+                        isNew: true,
+                        message: "creating a new chatroom",
+                        chatRoomId: newRoom._id,
+                        type: newRoom.type,
+                    },
+                });
+            }
+        } catch (error) {
+            console.log("error on start chat method", error);
+            throw error;
         }
-    } catch (error) {
-        console.log("error on start chat method", error);
-        throw error;
     }
 });
 

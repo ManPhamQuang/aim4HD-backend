@@ -11,12 +11,14 @@ const chatRoomSchema = new mongoose.Schema(
             {
                 type: mongoose.Types.ObjectId,
                 ref: "User",
+                required: [true, "Chat room must have at least one user id"],
             },
         ],
         type: String,
         chatInitiator: {
             type: mongoose.Types.ObjectId,
             ref: "User",
+            required: [true, "Chat room must have at least one initiator id"],
         },
     },
     {
