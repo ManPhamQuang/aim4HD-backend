@@ -8,6 +8,8 @@ const AppError = require("../utils/appError");
 const ApiFeature = require("../utils/ApiFeature");
 const sendEmail = require("../utils/sendEmail");
 const { createNoti } = require("./notificationController");
+const makeValidation = require("@withvoid/make-validation");
+const ChatMessage = require("../models/ChatMessage");
 const ChatRoom = require("../models/ChatRoom");
 
 exports.initiateChat = catchAsync(async (req, res, next) => {
@@ -19,48 +21,66 @@ exports.initiateChat = catchAsync(async (req, res, next) => {
             message: "Please provide userids, type, chatInitiator",
         });
     } else {
-        try {
-            const availableRoom = await ChatRoom.findOne({
-                userIds: {
-                    $size: userIds.length,
-                    $all: [...userIds],
+        const availableRoom = await ChatRoom.findOne({
+            userIds: {
+                $size: userIds.length,
+                $all: [...userIds],
+            },
+            type,
+        });
+
+        if (availableRoom) {
+            res.status(200).json({
+                status: "success",
+                data: {
+                    isNew: false,
+                    message: "retrieving an old chat room",
+                    chatRoomId: availableRoom._id,
+                    type: availableRoom.type,
                 },
-                type,
             });
+        }
 
-            if (availableRoom) {
-                res.status(200).json({
-                    status: "success",
-                    data: {
-                        isNew: false,
-                        message: "retrieving an old chat room",
-                        chatRoomId: availableRoom._id,
-                        type: availableRoom.type,
-                    },
-                });
-            }
-
-            if (!availableRoom) {
-                const newRoom = await ChatRoom.create({
-                    userIds,
-                    type,
-                    chatInitiator,
-                });
-                res.status(200).json({
-                    status: "success",
-                    data: {
-                        isNew: true,
-                        message: "creating a new chatroom",
-                        chatRoomId: newRoom._id,
-                        type: newRoom.type,
-                    },
-                });
-            }
-        } catch (error) {
-            console.log("error on start chat method", error);
-            throw error;
+        if (!availableRoom) {
+            const newRoom = await ChatRoom.create({
+                userIds,
+                type,
+                chatInitiator,
+            });
+            res.status(200).json({
+                status: "success",
+                data: {
+                    isNew: true,
+                    message: "creating a new chatroom",
+                    chatRoomId: newRoom._id,
+                    type: newRoom.type,
+                },
+            });
         }
     }
+});
+
+exports.postMessage = catchAsync(async (req, res, next) => {
+    const { roomId } = req.params;
+    const validation = makeValidation((types) => ({
+        payload: req.body,
+        checks: {
+            messageText: { type: types.string },
+        },
+    }));
+    if (!validation.success) return res.status(400).json({ ...validation });
+
+    const messagePayload = {
+        messageText: req.body.messageText,
+    };
+    const currentLoggedUser = req.body.postedByUser;
+    const post = await ChatMessage.createPostInChatRoom(
+        roomId,
+        messagePayload,
+        currentLoggedUser
+    );
+    // global.io.sockets.in(roomId).emit("new message", { message: post }); // TODO: CHANGE THE GLOBAL IO VARIABLE
+    return res.status(200).json({ success: true, post });
 });
 
 // exports.getAllPosts = catchAsync(async (req, res, next) => {

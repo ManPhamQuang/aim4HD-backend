@@ -26,6 +26,7 @@ const chatMessageSchema = new mongoose.Schema(
         chatRoomId: {
             type: mongoose.Types.ObjectId,
             ref: "ChatRoom",
+            required: [true, "Chatroom id required for chat message"],
         },
         message: mongoose.Schema.Types.Mixed,
         type: {
@@ -35,6 +36,7 @@ const chatMessageSchema = new mongoose.Schema(
         postedByUser: {
             type: mongoose.Types.ObjectId,
             ref: "User",
+            required: [true, "user id required for chat message"],
         },
         readByRecipients: [readByRecipientSchema],
     },
@@ -273,4 +275,4 @@ chatMessageSchema.statics.getRecentConversation = async function (
     }
 };
 
-export default mongoose.model("ChatMessage", chatMessageSchema);
+module.exports = new mongoose.model("ChatMessage", chatMessageSchema);
