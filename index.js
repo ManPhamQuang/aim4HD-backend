@@ -13,6 +13,7 @@ const globalErrorAppHandler = require("./controller/errorController");
 const Notification = require("./models/Notification");
 const AppError = require("./utils/appError");
 const app = express();
+const chatroomRouter = require("./route/chatroomRoute");
 const server = require("http").createServer(app);
 const socket = require("./socket-instance");
 socket.configure(server);
@@ -65,6 +66,8 @@ app.use("/api/v1/skills", skillRouter);
 app.use("/api/v1/courses", courseRouter);
 
 app.use("/api/v1/notification", notificationRouter);
+
+app.use("/api/v1/chatroom", chatroomRouter);
 
 app.all("*", (req, res, next) => {
     return next(
