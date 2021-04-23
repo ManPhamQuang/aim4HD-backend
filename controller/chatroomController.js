@@ -83,6 +83,62 @@ exports.postMessage = catchAsync(async (req, res, next) => {
     return res.status(200).json({ success: true, post });
 });
 
+exports.getConversationByRoomId = catchAsync(async (req, res, next) => {
+    const { roomId } = req.params;
+    const room = await ChatRoom.findById(roomId);
+    if (!room) {
+        return res.status(400).json({
+            success: false,
+            message: "No room exists for this id",
+        });
+    }
+    // const users = await User.getUserByIds(room.userIds);
+    const users = await User.find({ _id: { $in: room.userIds } });
+    const options = {
+        page: parseInt(req.query.page) || 0,
+        limit: parseInt(req.query.limit) || 10,
+    };
+    // const conversation = await ChatMessage.getConversationByRoomId(
+    //     roomId,
+    //     options
+    // );
+    const conversation = await getConversationByRoomId(roomId, options);
+    return res.status(200).json({
+        success: true,
+        conversation,
+        users,
+    });
+});
+
+const getConversationByRoomId = async (roomId, options) => {
+    let conversation = await ChatMessage.find({ chatRoomId: roomId }, null, {
+        sort: { createdAt: -1 },
+        skip: options.page * options.limit,
+        limit: options.limit,
+    });
+    // let results = await this.aggregate([
+    //     { $match: { chatRoomId } },
+    //     { $sort: { createdAt: -1 } },
+    //     // do a join on another table called users, and
+    //     // get me a user whose _id = postedByUser
+    //     {
+    //         $lookup: {
+    //             from: "users",
+    //             localField: "postedByUser",
+    //             foreignField: "_id",
+    //             as: "postedByUser",
+    //         },
+    //     },
+    //     { $unwind: "$postedByUser" },
+    //     // // apply pagination
+    //     { $skip: options.page * options.limit },
+    //     { $limit: options.limit },
+    //     { $sort: { createdAt: 1 } },
+    // ]);
+    // console.log(results);
+    return conversation;
+};
+
 // exports.getAllPosts = catchAsync(async (req, res, next) => {
 //     const currentQuery = Post.find()
 //         .populate("course")

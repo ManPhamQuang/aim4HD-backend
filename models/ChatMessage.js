@@ -124,37 +124,39 @@ chatMessageSchema.statics.createPostInChatRoom = async function (
     }
 };
 
-/**
- * @param {String} chatRoomId - chat room id
- */
-chatMessageSchema.statics.getConversationByRoomId = async function (
-    chatRoomId,
-    options = {}
-) {
-    try {
-        return this.aggregate([
-            { $match: { chatRoomId } },
-            { $sort: { createdAt: -1 } },
-            // do a join on another table called users, and
-            // get me a user whose _id = postedByUser
-            {
-                $lookup: {
-                    from: "users",
-                    localField: "postedByUser",
-                    foreignField: "_id",
-                    as: "postedByUser",
-                },
-            },
-            { $unwind: "$postedByUser" },
-            // apply pagination
-            { $skip: options.page * options.limit },
-            { $limit: options.limit },
-            { $sort: { createdAt: 1 } },
-        ]);
-    } catch (error) {
-        throw error;
-    }
-};
+// /**
+//  * @param {String} chatRoomId - chat room id
+//  */
+// chatMessageSchema.statics.getConversationByRoomId = async function (
+//     chatRoomId,
+//     options = {}
+// ) {
+//     try {
+//         let results = await this.aggregate([
+//             { $match: { chatRoomId } },
+//             { $sort: { createdAt: -1 } },
+//             // do a join on another table called users, and
+//             // get me a user whose _id = postedByUser
+//             {
+//                 $lookup: {
+//                     from: "users",
+//                     localField: "postedByUser",
+//                     foreignField: "_id",
+//                     as: "postedByUser",
+//                 },
+//             },
+//             { $unwind: "$postedByUser" },
+//             // // apply pagination
+//             { $skip: options.page * options.limit },
+//             { $limit: options.limit },
+//             { $sort: { createdAt: 1 } },
+//         ]);
+//         console.log(results);
+//         return results;
+//     } catch (error) {
+//         throw error;
+//     }
+// };
 
 /**
  * @param {String} chatRoomId - chat room id
