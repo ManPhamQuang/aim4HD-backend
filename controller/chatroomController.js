@@ -90,8 +90,9 @@ exports.postMessage = catchAsync(async (req, res, next) => {
         action: "sent a message",
         postLink: roomId,
     });
-    console.log(post);
-    socketInstance.io.emit("new message", { message: post });
+    // console.log(post);
+    // socketInstance.io.emit("new message", { message: post });
+    socketInstance.io.to(roomId).emit("new message", { message: post }); // emit new messages to the coressponding room id
     return res.status(200).json({ success: true, post, notification });
 });
 
