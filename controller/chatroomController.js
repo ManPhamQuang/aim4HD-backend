@@ -1,6 +1,6 @@
 const User = require("../models/User");
 const catchAsync = require("../utils/catchAsync");
-const { createNoti } = require("./notificationController");
+const { createNoti, createNotis } = require("./notificationController");
 const makeValidation = require("@withvoid/make-validation");
 const ChatMessage = require("../models/ChatMessage");
 const ChatRoom = require("../models/ChatRoom");
@@ -55,6 +55,13 @@ exports.initiateChat = catchAsync(async (req, res, next) => {
 
 exports.postMessage = catchAsync(async (req, res, next) => {
     const { roomId } = req.params;
+    const room = await ChatRoom.findById(roomId);
+    if (!room) {
+        return res.status(400).json({
+            success: false,
+            message: "No room exists for this id",
+        });
+    }
     const validation = makeValidation((types) => ({
         payload: req.body,
         checks: {
@@ -72,8 +79,17 @@ exports.postMessage = catchAsync(async (req, res, next) => {
         messagePayload,
         currentLoggedUser
     );
+
+    let notification = await createNotis({
+        sender: currentLoggedUser,
+        receivers: room.userIds.filter((id) => {
+            return !id.equals(currentLoggedUser);
+        }),
+        action: "sent a message",
+        postLink: roomId,
+    });
     // global.io.sockets.in(roomId).emit("new message", { message: post }); // TODO: CHANGE THE GLOBAL IO VARIABLE
-    return res.status(200).json({ success: true, post });
+    return res.status(200).json({ success: true, post, notification });
 });
 
 exports.getConversationByRoomId = catchAsync(async (req, res, next) => {

@@ -8,6 +8,7 @@ const actionValues = [
     "commented on your post",
     "commented on a post you're applied to",
     "commented on a post you're following",
+    "sent a message",
 ];
 
 const notificationSchema = new mongoose.Schema(

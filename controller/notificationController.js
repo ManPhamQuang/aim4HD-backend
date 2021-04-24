@@ -47,48 +47,31 @@ exports.createNoti = async ({
         createdAt: new Date(),
         content: `${sender.name} ${action} ${receiver.name}`,
     });
-    //  io.on("connection", function (socket) {
-    //         console.log(`Client with ID of ${socket.id} connected!`);
-    //         socket.on("getNotification", async (data) => {
-    //             console.log("getNotification event");
-    //             console.log(data);
-    //             const notifications = await Notification.find({
-    //                 receiver: data.id,
-    //             });
-    //             console.log(notifications);
-    //             // let notifications = ["h1"];
-    //             socket.emit("notifications", { notifications: notifications });
-    //         });
-    //         // socket.emit("message", { data: "big data" });
-    //         socket.on("disconnect", () => {
-    //             console.log("disconnected");
-    //         });
-    //         socket.on("error", function (err) {
-    //             console.log(err);
-    //         });
-    //   });
     socketInstance.io.emit("newNoti", notification);
-    // io.on("connection", function (socket) {
-    //     console.log(`Client with ID of ${socket.id} connected!`);
-    //     socket.on("getNotification", async (data) => {
-    //         console.log("getNotification event");
-    //         console.log(data);
-    //         const notifications = await Notification.find({
-    //             receiver: data.id,
-    //         });
-    //         console.log(notifications);
-    //         // let notifications = ["h1"];
-    //         socket.emit("notifications", { notifications: notifications });
-    //     });
-    //     // socket.emit("message", { data: "big data" });
-    //     socket.on("disconnect", () => {
-    //         console.log("disconnected");
-    //     });
-    //     socket.on("error", function (err) {
-    //         console.log(err);
-    //     });
-    // });
     return notification;
+};
+
+exports.createNotis = async ({
+    sender: senderId,
+    receivers: receiverIds,
+    action,
+    postLink,
+}) => {
+    const sender = await User.findById(senderId);
+    const promises = receiverIds.map(async (el) => {
+        const receiver = await User.findById(el);
+        let newNoti = {
+            sender: senderId,
+            receiver: el,
+            createdAt: new Date(),
+            postLink: postLink,
+            action: action,
+            createdAt: new Date(),
+            content: `${sender.name} ${action} ${receiver.name}`,
+        };
+        return newNoti;
+    });
+    return Notification.insertMany(await Promise.all(promises));
 };
 
 exports.createNotification = catchAsync(async (req, res, next) => {
