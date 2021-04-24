@@ -1,12 +1,9 @@
 const User = require("../models/User");
-const Skill = require("../models/Skill");
-const Course = require("../models/Course");
 const Notification = require("../models/Notification");
 const catchAsync = require("../utils/catchAsync");
 const ApiFeature = require("../utils/ApiFeature");
 const AppError = require("../utils/appError");
 const socketInstance = require("../socket-instance");
-const io = socketInstance.io;
 
 const actionvalues = [
     "applied to your post",
