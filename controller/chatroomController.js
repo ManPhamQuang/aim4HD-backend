@@ -4,6 +4,7 @@ const { createNoti, createNotis } = require("./notificationController");
 const makeValidation = require("@withvoid/make-validation");
 const ChatMessage = require("../models/ChatMessage");
 const ChatRoom = require("../models/ChatRoom");
+const socketInstance = require("../socket-instance");
 
 exports.initiateChat = catchAsync(async (req, res, next) => {
     // to start a new chat room between an array of user ids
@@ -40,6 +41,7 @@ exports.initiateChat = catchAsync(async (req, res, next) => {
                 type,
                 chatInitiator,
             });
+            // socketInstance.io.join()
             res.status(200).json({
                 status: "success",
                 data: {
@@ -88,7 +90,8 @@ exports.postMessage = catchAsync(async (req, res, next) => {
         action: "sent a message",
         postLink: roomId,
     });
-    // global.io.sockets.in(roomId).emit("new message", { message: post }); // TODO: CHANGE THE GLOBAL IO VARIABLE
+    console.log(post);
+    socketInstance.io.emit("new message", { message: post });
     return res.status(200).json({ success: true, post, notification });
 });
 

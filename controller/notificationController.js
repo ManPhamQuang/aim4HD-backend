@@ -16,9 +16,26 @@ const actionvalues = [
 ];
 
 exports.getNotificationOfUser = catchAsync(async (req, res, next) => {
-    const notifications = await Notification.find({ receiver: req.params.id });
+    const options = {
+        page: parseInt(req.query.page) || 0,
+        limit: parseInt(req.query.limit) || 10,
+    };
+    const notifications = await Notification.find(
+        { receiver: req.params.id },
+        null,
+        {
+            sort: { createdAt: -1 },
+            skip: options.page * options.limit,
+            limit: options.limit,
+        }
+    );
     // .populate("sender")
     // .populate("receiver");
+    // let conversation = await ChatMessage.find({ chatRoomId: roomId }, null, {
+    //         sort: { createdAt: -1 },
+    //         skip: options.page * options.limit,
+    //         limit: options.limit,
+    //     });
 
     if (!notifications)
         return next(
@@ -68,6 +85,10 @@ exports.createNotis = async ({
         };
         return newNoti;
     });
+    // global.io.sockets.in(roomId).emit("new message", { message: post }); // TODO: CHANGE THE GLOBAL IO VARIABLE
+    // socketInstance.io.sockets.in(roomId).emit("new message", {message: })
+    // socketInstance.io.emit("new message", {message: })
+
     return Notification.insertMany(await Promise.all(promises));
 };
 
@@ -86,7 +107,7 @@ exports.createNotification = catchAsync(async (req, res, next) => {
         data: notification,
     });
 });
-// TODO: CREATE MARK NOTIFICATION READ API CONTROLLER AND ROUTE
+
 exports.markNotificationRead = catchAsync(async (req, res, next) => {
     const notificationId = req.body.id;
     const data = { ...req.body };
