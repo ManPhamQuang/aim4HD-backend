@@ -156,22 +156,24 @@ exports.applyForPost = catchAsync(async (req, res, next) => {
     const currentPostId = req.params.id;
     if (post.appliedStudents.includes(currentUserId)) {
         post.appliedStudents = post.appliedStudents.filter(
-            (userId) => userId.toString() !== currentUserId
+            (userId) => userId.toString() !== currentUserId // unapply user
         );
-    } else post.appliedStudents.push(currentUserId);
+    } else {
+        post.appliedStudents.push(currentUserId); // apply user
+        let notification = await createNoti({
+            sender: currentUserId,
+            receiver: post.author,
+            action: "applied to your post",
+            postLink: currentPostId,
+        });
+    }
     await post.save();
-    let notification = await createNoti({
-        sender: currentUserId,
-        receiver: post.author,
-        action: "applied to your post",
-        postLink: currentPostId,
-    });
+
     res.status(200).json({
         status: "success",
         data: {
             post,
         },
-        notification: notification,
     });
 });
 
