@@ -25,6 +25,7 @@ socket.configure(server);
 socket.io.on("connection", function (socket) {
     socket.on("room ids", (data) => {
         // join all room id provided in the data array
+        console.log("receiving room ids", data);
         data.forEach((room) => socket.join(room));
     });
     console.log(`Client with ID of ${socket.id} connected!`);

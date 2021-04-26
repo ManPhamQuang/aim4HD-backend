@@ -6,8 +6,10 @@ const {
     postMessage,
     getConversationByRoomId,
     markConversationReadByRoomId,
+    getRooms,
 } = require("../controller/chatroomController");
 
+router.get("/:userId", getRooms);
 router.get("/:roomId/message", getConversationByRoomId);
 router.post("/initiate", initiateChat);
 router.post("/:roomId/message", postMessage);

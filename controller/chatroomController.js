@@ -96,6 +96,21 @@ exports.postMessage = catchAsync(async (req, res, next) => {
     return res.status(200).json({ success: true, post, notification });
 });
 
+exports.getRooms = catchAsync(async (req, res, next) => {
+    const { userId } = req.params;
+    const rooms = await ChatRoom.find({ userIds: { $in: [userId] } });
+    if (!rooms) {
+        return res.status(400).json({
+            success: false,
+            message: "No rooms exists for this user id",
+        });
+    }
+    res.status(200).json({
+        success: true,
+        rooms,
+    });
+});
+
 exports.getConversationByRoomId = catchAsync(async (req, res, next) => {
     const { roomId } = req.params;
     const room = await ChatRoom.findById(roomId);
