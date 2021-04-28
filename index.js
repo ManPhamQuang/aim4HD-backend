@@ -34,7 +34,10 @@ socket.io.on("connection", function (socket) {
         // console.log(data);
         const notifications = await Notification.find({
             receiver: data.id,
-        });
+        })
+            .populate("sender")
+            .populate("receiver");
+        console.log(notifications);
         // console.log(notifications);
         // let notifications = ["h1"];
         socket.emit("notifications", { notifications: notifications });
