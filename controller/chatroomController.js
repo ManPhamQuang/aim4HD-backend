@@ -141,7 +141,7 @@ exports.getConversationByRoomId = catchAsync(async (req, res, next) => {
 const getConversationByRoomId = async (roomId, options) => {
     let conversation = await ChatMessage.find({ chatRoomId: roomId }, null, {
         sort: { createdAt: -1 },
-        skip: options.page * options.limit,
+        skip: (options.page - 1) * options.limit,
         limit: options.limit,
     });
     return conversation;

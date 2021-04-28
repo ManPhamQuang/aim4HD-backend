@@ -25,7 +25,7 @@ exports.getNotificationOfUser = catchAsync(async (req, res, next) => {
         null,
         {
             sort: { createdAt: -1 },
-            skip: options.page * options.limit,
+            skip: (options.page - 1) * options.limit,
             limit: options.limit,
         }
     );
@@ -33,7 +33,7 @@ exports.getNotificationOfUser = catchAsync(async (req, res, next) => {
     // .populate("receiver");
     // let conversation = await ChatMessage.find({ chatRoomId: roomId }, null, {
     //         sort: { createdAt: -1 },
-    //         skip: options.page * options.limit,
+    //         skip: (options.page -1) * options.limit,
     //         limit: options.limit,
     //     });
 
