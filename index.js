@@ -37,7 +37,6 @@ socket.io.on("connection", function (socket) {
         })
             .populate("sender")
             .populate("receiver");
-        console.log(notifications);
         // console.log(notifications);
         // let notifications = ["h1"];
         socket.emit("notifications", { notifications: notifications });

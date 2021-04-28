@@ -43,6 +43,10 @@ const notificationSchema = new mongoose.Schema(
             },
             required: true,
         },
+        createdAt: {
+            type: Date,
+            default: Date.now(),
+        },
         postLink: {
             type: mongoose.Types.ObjectId,
             ref: "Post",
