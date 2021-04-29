@@ -140,7 +140,9 @@ exports.markAllNotificationRead = catchAsync(async (req, res, next) => {
         );
     const notifications = await Notification.find({ receiver: userId }, null, {
         sort: { createdAt: -1 },
-    });
+    })
+        .populate("sender")
+        .populate("receiver");
     console.log(notificationsRead);
 
     let modified = notificationsRead.nModified === 0; // if no notification have been modifed
