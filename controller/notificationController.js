@@ -130,13 +130,20 @@ exports.markNotificationRead = catchAsync(async (req, res, next) => {
 
 exports.markAllNotificationRead = catchAsync(async (req, res, next) => {
     const userId = req.body.userId;
-    const notifications = await Notification.updateMany(
+    const notificationsRead = await Notification.updateMany(
         { receiver: userId },
         { $set: { read: true } }
     );
-    if (!notifications)
+    if (!notificationsRead)
         return next(
             new AppError("No Notification was found with given user id", 404)
         );
-    res.status(200).json({ status: "success", data: { notifications } });
+    const notifications = await Notification.find({ receiver: userId }, null, {
+        sort: { createdAt: -1 },
+    });
+
+    res.status(200).json({
+        status: "success",
+        data: { notifications },
+    });
 });
