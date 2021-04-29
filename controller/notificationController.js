@@ -141,9 +141,14 @@ exports.markAllNotificationRead = catchAsync(async (req, res, next) => {
     const notifications = await Notification.find({ receiver: userId }, null, {
         sort: { createdAt: -1 },
     });
+    console.log(notificationsRead);
 
+    let modified = notificationsRead.nModified === 0; // if no notification have been modifed
     res.status(200).json({
-        status: "success",
+        status: !modified,
         data: { notifications },
+        message: modified
+            ? "All notifications have already been read"
+            : "Successfully mark all notifications read",
     });
 });
