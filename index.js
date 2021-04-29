@@ -15,37 +15,43 @@ const AppError = require("./utils/appError");
 const app = express();
 const chatroomRouter = require("./route/chatroomRoute");
 const server = require("http").createServer(app);
-const socket = require("./socket-instance");
-socket.configure(server);
+const socketInstance = require("./socket-instance");
+socketInstance.configure(server);
 
 // server.listen(5000, () => {
 //     console.log("express and socket running on 5000");
 // });
 
-socket.io.on("connection", function (socket) {
-    socket.on("room ids", (data) => {
+socketInstance.io.on("connection", function (socketClient) {
+    socketClient.on("room ids", (data) => {
         // join all room id provided in the data array
         console.log("receiving room ids", data);
-        data.forEach((room) => socket.join(room));
+        // data.forEach((room) => socket.join(room));
+        socketClient.join(data);
     });
-    console.log(`Client with ID of ${socket.id} connected!`);
-    socket.on("getNotification", async (data) => {
-        // console.log("getNotification event");
-        // console.log(data);
-        const notifications = await Notification.find({
-            receiver: data.id,
-        })
+    console.log(`Client with ID of ${socketClient.id} connected!`);
+    socketClient.on("getNotification", async ({ id }) => {
+        socketClient.join(id);
+        const notifications = await Notification.find(
+            {
+                receiver: id,
+            },
+            null,
+            {
+                sort: { createdAt: -1 },
+            }
+        )
             .populate("sender")
             .populate("receiver");
-        // console.log(notifications);
-        // let notifications = ["h1"];
-        socket.emit("notifications", { notifications: notifications });
+
+        socketInstance.io
+            .to(id)
+            .emit("notifications", { notifications: notifications });
     });
-    // socket.emit("message", { data: "big data" });
-    socket.on("disconnect", () => {
+    socketClient.on("disconnect", () => {
         console.log("disconnected");
     });
-    socket.on("error", function (err) {
+    socketClient.on("error", function (err) {
         console.log(err);
     });
 });

@@ -61,7 +61,9 @@ exports.createNoti = async ({
         createdAt: new Date(),
         content: `${sender.name} ${action} ${receiver.name}`,
     });
-    socketInstance.io.emit("newNoti", notification);
+    await notification.populate("sender").populate("receiver").execPopulate();
+
+    socketInstance.io.to(receiverId.toString()).emit("newNoti", notification);
     return notification;
 };
 
