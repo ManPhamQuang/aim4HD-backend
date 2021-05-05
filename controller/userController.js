@@ -46,7 +46,11 @@ exports.updateUser = catchAsync(async (req, res, next) => {
     const user = await User.findByIdAndUpdate(userId, data, {
         new: true,
         runValidators: true,
-    });
+    })
+        .populate("skills")
+        .populate("currentCourses")
+        .populate("savedPosts")
+        .populate("pastCoursesGrades.course");
     if (!user)
         return next(new AppError("No User was found with a given ID", 404));
     res.status(200).json({ status: "success", data: { user } });
