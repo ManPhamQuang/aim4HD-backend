@@ -53,15 +53,21 @@ exports.getUser = catchAsync(async (req, res, next) => {
 });
 
 exports.searchUser = catchAsync(async (req, res, next) => {
-    const users = await User.fuzzySearch({
+    const currentQuery = User.fuzzySearch({
         query: req.body.query,
         // prefixOnly: true, // TODO: check back with this
         minSize: 2,
-    });
-    if (!users) {
+    }).populate("skills");
+    const { query } = new ApiFeature(currentQuery, { ...req.query })
+        .filter()
+        .sort()
+        .field()
+        .paginate();
+    const data = await query;
+    if (!data) {
         return next(new AppError("No users was found with given query", 404));
     }
-    res.status(200).json({ status: "success", data: users });
+    res.status(200).json({ status: "success", data: data });
 });
 
 exports.updateUser = catchAsync(async (req, res, next) => {
