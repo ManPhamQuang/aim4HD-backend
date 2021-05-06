@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const mongoose_fuzzy_searching = require("mongoose-fuzzy-searching");
 
 exports.USER_TYPES = {
     CONSUMER: "consumer",
@@ -185,5 +186,7 @@ const userSchema = new mongoose.Schema(
 //         throw error;
 //     }
 // };
+
+userSchema.plugin(mongoose_fuzzy_searching, { fields: ["name"] });
 
 module.exports = new mongoose.model("User", userSchema);

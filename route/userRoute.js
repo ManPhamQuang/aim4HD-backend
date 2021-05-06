@@ -3,6 +3,7 @@ const {
     getUser,
     getAllUsers,
     updateUser,
+    searchUser,
 } = require("../controller/userController");
 const {
     signup,
@@ -18,6 +19,7 @@ router.use("/:userId/feedbacks", feedbackRoute);
 router.get("/", getAllUsers);
 
 router.get("/:id", getUser);
+router.get("/search/fuzzy", searchUser);
 
 router.post("/login", login);
 router.post("/signup", signup);

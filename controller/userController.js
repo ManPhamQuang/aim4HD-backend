@@ -33,6 +33,15 @@ exports.getUser = catchAsync(async (req, res, next) => {
     res.status(200).json({ status: "success", data: { user } });
 });
 
+exports.searchUser = catchAsync(async (req, res, next) => {
+    console.log(req.body.query);
+    const users = await User.fuzzySearch("Phuong");
+    if (!users) {
+        return next(new AppError("No users was found with given query", 404));
+    }
+    res.status(200).json({ status: "success", data: users });
+});
+
 exports.updateUser = catchAsync(async (req, res, next) => {
     const userId = req.body.id;
     const data = { ...req.body };
