@@ -21,6 +21,25 @@ exports.getAllUsers = catchAsync(async (req, res, next) => {
     });
 });
 
+exports.updateExistingDocWithNgrams = catchAsync(async (req, res, next) => {
+    const cursor = User.find().cursor();
+    attrs = ["name"];
+    cursor.next(async (error, doc) => {
+        if (error) {
+            // TODO: specific error message return
+            console.log(error);
+            return next(new AppError("some error happend"));
+        }
+        const obj = attrs.reduce(
+            (acc, attr) => ({ ...acc, [attr]: doc[attr] }),
+            {}
+        );
+        console.log(obj);
+        let result = await User.findByIdAndUpdate(doc._id, obj);
+        res.status(200).json({ status: "success", data: result });
+    });
+});
+
 exports.getUser = catchAsync(async (req, res, next) => {
     const user = await User.findById(req.params.id)
         .populate("skills")
@@ -34,8 +53,11 @@ exports.getUser = catchAsync(async (req, res, next) => {
 });
 
 exports.searchUser = catchAsync(async (req, res, next) => {
-    console.log(req.body.query);
-    const users = await User.fuzzySearch("Phuong");
+    const users = await User.fuzzySearch({
+        query: req.body.query,
+        // prefixOnly: true, // TODO: check back with this
+        minSize: 2,
+    });
     if (!users) {
         return next(new AppError("No users was found with given query", 404));
     }
