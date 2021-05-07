@@ -52,8 +52,9 @@ exports.getPost = catchAsync(async (req, res, next) => {
 });
 
 exports.searchPosts = catchAsync(async (req, res, next) => {
+    let queryString = req.query.query;
     const currentQuery = Post.fuzzySearch({
-        query: req.body.query,
+        query: queryString,
         prefixOnly: true, // TODO: check back with this
         minSize: 1,
     }).populate("requiredSkills");

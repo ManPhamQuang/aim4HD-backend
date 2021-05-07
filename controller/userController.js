@@ -53,8 +53,9 @@ exports.getUser = catchAsync(async (req, res, next) => {
 });
 
 exports.searchUser = catchAsync(async (req, res, next) => {
+    let queryString = req.query.query;
     const currentQuery = User.fuzzySearch({
-        query: req.body.query,
+        query: queryString,
         // prefixOnly: true, // TODO: check back with this
         minSize: 2,
     }).populate("skills");

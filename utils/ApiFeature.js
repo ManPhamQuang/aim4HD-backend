@@ -8,7 +8,7 @@ class ApiFeature {
 
     filter() {
         const queryObjForFilter = { ...this.queryObj };
-        const excludeFields = ["sort", "page", "limit", "fields"];
+        const excludeFields = ["sort", "page", "limit", "fields", "query"];
         excludeFields.forEach((field) => delete queryObjForFilter[field]);
         if (this.queryObj.aiming && this.queryObj.aiming.includes(",")) {
             let aiming = this.queryObj.aiming.split(",");
