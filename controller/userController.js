@@ -62,8 +62,7 @@ exports.searchUser = catchAsync(async (req, res, next) => {
     const { query } = new ApiFeature(currentQuery, { ...req.query })
         .filter()
         .sort()
-        .field()
-        .paginate();
+        .field();
     const data = await query;
     if (!data) {
         return next(new AppError("No users was found with given query", 404));
