@@ -87,9 +87,6 @@ exports.createNotis = async ({
         };
         return newNoti;
     });
-    // global.io.sockets.in(roomId).emit("new message", { message: post }); // TODO: CHANGE THE GLOBAL IO VARIABLE
-    // socketInstance.io.sockets.in(roomId).emit("new message", {message: })
-    // socketInstance.io.emit("new message", {message: })
 
     return Notification.insertMany(await Promise.all(promises));
 };

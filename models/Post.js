@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const mongoose_fuzzy_searching = require("mongoose-fuzzy-searching");
 
 const postSchema = new mongoose.Schema(
     {
@@ -60,5 +61,13 @@ const postSchema = new mongoose.Schema(
         toObject: { virtuals: true },
     }
 );
+
+postSchema.plugin(mongoose_fuzzy_searching, {
+    fields: [
+        { name: "title", minSize: 2, weight: 5 },
+        { name: "aiming", minSize: 2, weight: 2 },
+        { name: "content", minSize: 4, prefixOnly: true, weight: 1 },
+    ],
+});
 
 module.exports = new mongoose.model("Post", postSchema);

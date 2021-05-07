@@ -7,6 +7,7 @@ const {
     updatePost,
     deletePost,
     applyForPost,
+    searchPosts,
 } = require("../controller/postController");
 const { checkLogin } = require("../controller/authController");
 const commentRoute = require("./commentRoute");
@@ -15,6 +16,7 @@ router.use("/:postId/comments", commentRoute);
 
 router.get("/", getAllPosts);
 router.get("/:id", getPost);
+router.get("/search/fuzzy", searchPosts);
 
 // router.use(checkLogin);
 

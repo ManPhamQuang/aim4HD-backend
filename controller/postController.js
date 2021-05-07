@@ -51,6 +51,24 @@ exports.getPost = catchAsync(async (req, res, next) => {
     });
 });
 
+exports.searchPosts = catchAsync(async (req, res, next) => {
+    const currentQuery = Post.fuzzySearch({
+        query: req.body.query,
+        prefixOnly: true, // TODO: check back with this
+        minSize: 1,
+    }).populate("requiredSkills");
+    const { query } = new ApiFeature(currentQuery, { ...req.query })
+        .filter()
+        .sort()
+        .field()
+        .paginate();
+    const data = await query;
+    if (!data) {
+        return next(new AppError("No posts was found with given query", 404));
+    }
+    res.status(200).json({ status: "success", data: data });
+});
+
 exports.createPost = catchAsync(async (req, res, next) => {
     const post = await Post.create({ ...req.body, createdAt: new Date() });
     res.status(201).json({
