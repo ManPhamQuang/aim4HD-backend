@@ -56,7 +56,7 @@ exports.searchPosts = catchAsync(async (req, res, next) => {
     const currentQuery = Post.fuzzySearch({
         query: queryString,
         prefixOnly: true, // TODO: check back with this
-        minSize: 1,
+        minSize: 4,
     })
         .populate("course")
         .populate("requiredSkills")
@@ -66,8 +66,7 @@ exports.searchPosts = catchAsync(async (req, res, next) => {
     const { query } = new ApiFeature(currentQuery, { ...req.query })
         .filter()
         .sort()
-        .field()
-        .paginate();
+        .field();
     const data = await query;
     if (!data) {
         return next(new AppError("No posts was found with given query", 404));
