@@ -57,7 +57,7 @@ exports.searchUser = catchAsync(async (req, res, next) => {
     const currentQuery = User.fuzzySearch({
         query: queryString,
         // prefixOnly: true, // TODO: check back with this
-        minSize: 2,
+        minSize: 1,
     }).populate("skills");
     const { query } = new ApiFeature(currentQuery, { ...req.query })
         .filter()
