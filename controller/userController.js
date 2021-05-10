@@ -58,7 +58,9 @@ exports.searchUser = catchAsync(async (req, res, next) => {
         query: queryString,
         // prefixOnly: true, // TODO: check back with this
         minSize: 1,
-    }).populate("skills");
+    })
+        .populate("skills")
+        .populate("currentCourses");
     const { query } = new ApiFeature(currentQuery, { ...req.query })
         .filter()
         .sort()

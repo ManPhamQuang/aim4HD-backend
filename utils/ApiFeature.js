@@ -31,6 +31,7 @@ class ApiFeature {
     field() {
         if (this.queryObj.fields) {
             const chosenFields = this.queryObj.fields.replace(/,/g, " ");
+            console.log(chosenFields);
             this.query.select(chosenFields);
         } else {
             this.query.select("-__v");
